@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+.root {
+    position: relative;
+    padding-top: spacing(1);
+    padding-bottom: spacing(4);
+    background-color: theme('primary');
+    background-image: url('/images/pixels.svg');
+    background-repeat: repeat;
+    background-size: 1000px;
+}
+
+.lining {
+    display: block;
+    position: absolute;
+    background-image: url('/images/pixels-lining.svg');
+    background-repeat: repeat-x;
+    bottom: spacing(-2.5);
+    left: 0;
+    right: 0;
+    height: spacing(5);
+    z-index: 1;
+}

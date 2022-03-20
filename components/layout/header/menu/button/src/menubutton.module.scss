@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.root {
+    color: theme('text-color');
+    text-decoration: none;
+    transition: 0.4s;
+    font-family: Cybersomething-font;
+
+    &:hover,
+    &.active {
+        color: #000;
+    }
+}

@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    align-items: center;
+    height: spacing(3);
+
+    @media #{$mq-small} {
+        display: none;
+    }
+}
+
+.toggle {
+    margin-left: auto;
+}

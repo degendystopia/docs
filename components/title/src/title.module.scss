@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    padding: spacing(2);
+    border-radius: spacing(2);
+
+    &.light {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    &.dark {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &.left {
+        justify-content: flex-start;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.right {
+        justify-content: flex-end;
+    }
+
+    h1 {
+        background: theme('primary');
+        background-image: -webkit-linear-gradient(
+            to right,
+            theme('primary') 0%,
+            theme('secondary') 100%
+        );
+        background-image: -moz-linear-gradient(
+            to right,
+            theme('primary') 0%,
+            theme('secondary') 100%
+        );
+        background-image: linear-gradient(
+            to right,
+            theme('primary') 0%,
+            theme('secondary') 100%
+        );
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: black;
+    }
+}

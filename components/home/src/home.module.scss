@@ -1,0 +1,265 @@
+@use 'variables' as *;
+
+.root {
+    position: relative;
+    height: calc(100vh - spacing(12));
+    background-image: linear-gradient(theme('secondary'), theme('purple'));
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #fff, $alpha: 1);
+    mask-image: url('/images/pixels.svg');
+    mask-repeat: repeat;
+    mask-size: 200px;
+    z-index: 0;
+}
+
+.floor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: spacing(2);
+    background-color: theme('brown');
+    border-top: spacing(1) solid theme('background');
+    border-bottom: spacing(1) solid theme('primary');
+    z-index: 1;
+}
+
+.explosion-1 {
+    position: absolute;
+    width: spacing(10);
+    height: 100%;
+    background-image: url('/images/explosion-1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: 0;
+    right: 0;
+    bottom: spacing(3);
+    margin: auto;
+    z-index: 3;
+}
+
+.explosion-2 {
+    position: absolute;
+    width: spacing(20);
+    height: 100%;
+    background-image: url('/images/explosion-2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: spacing(2);
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 2;
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+// .explosion-3 {
+//     position: absolute;
+//     width: spacing(20);
+//     height: 100%;
+//     background-image: url('/images/explosion-3.png');
+//     background-repeat: no-repeat;
+//     background-size: 100%;
+//     background-position: bottom;
+//     right: spacing(2);
+//     bottom: spacing(4);
+//     margin: auto;
+//     z-index: 2;
+
+//     display: none;
+
+//     @media #{$mq-small} {
+//         display: block;
+//     }
+// }
+
+.mountain-1 {
+    position: absolute;
+    width: spacing(20);
+    height: 100%;
+    background-color: theme('primary');
+    mask-image: url('/images/mountain.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: bottom;
+    left: 0;
+    right: 0;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 2;
+}
+
+.mountain-2 {
+    position: absolute;
+    width: spacing(25);
+    height: 100%;
+    background-color: theme('secondary');
+    mask-image: url('/images/mountain.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: bottom;
+    left: spacing(10);
+    right: 0;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 1;
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+.mountain-3 {
+    position: absolute;
+    width: spacing(25);
+    height: 100%;
+    background-color: theme('purple-brown');
+    mask-image: url('/images/mountain.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: bottom;
+    left: spacing(-10);
+    right: 0;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 1;
+}
+
+.mountains {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        theme('purple-brown'),
+        theme('secondary')
+    );
+    mask-image: url('/images/mountain.svg');
+    mask-repeat: repeat-x;
+    mask-size: spacing(15);
+    mask-position: bottom;
+    left: 0;
+    right: 0;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 1;
+}
+
+.degen-1 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: 5%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+}
+
+.degen-2 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/5.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: 15%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+.degen-3 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/6.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    left: 25%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+.degen-4 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/7.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    right: 25%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    transform: scaleX(-1);
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+.degen-5 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/8.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    right: 15%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    transform: scaleX(-1);
+    display: none;
+
+    @media #{$mq-small} {
+        display: block;
+    }
+}
+
+.degen-6 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/degens/10.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    right: 5%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    transform: scaleX(-1);
+}

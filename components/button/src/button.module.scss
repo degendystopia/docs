@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    align-content: center;
+    outline: 0;
+    border: 0;
+    border-radius: spacing(0.4);
+    color: theme('text-color');
+    text-decoration: none;
+    transition: 0.4s;
+    background-color: unset;
+    gap: spacing(0.5);
+    padding-right: spacing(1);
+    font-family: Cybersomething-font;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: spacing(2);
+        height: spacing(2);
+
+        img {
+            width: spacing(1);
+            height: spacing(1);
+        }
+    }
+
+    .name {
+        display: flex;
+        align-items: center;
+        height: spacing(2);
+    }
+
+    &.light {
+        background-color: rgba($color: #fff, $alpha: 0.25);
+
+        &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            color: black;
+        }
+    }
+}

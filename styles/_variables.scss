@@ -1,0 +1,52 @@
+// Theme variables
+$spacing: 1em;
+
+// Font-Size
+$base-font-size: 1em;
+
+// Line-Height
+$base-line-height: 1.5;
+
+$h1-font-size: 2.7rem;
+$h2-font-size: 2.5rem;
+$h3-font-size: 2.3rem;
+$h4-font-size: 2.1rem;
+$h5-font-size: 1.9rem;
+$h6-font-size: 1.7rem;
+
+// Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: '(min-width: #{$bp-small})';
+$mq-medium: '(min-width: #{$bp-medium})';
+$mq-large: '(min-width: #{$bp-large})';
+$mq-xlarge: '(min-width: #{$bp-xlarge})';
+$mq-xxlarge: '(min-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+
+// Theme
+$theme: (
+    'background': #f47a3c,
+    'text-color': #ffffff,
+    'primary': #fdb621,
+    'secondary': #f46c11,
+    'blue': #15d7f5,
+    'purple': #e19ee6,
+    'brown': #cb5719,
+    'purple-brown': #874954,
+);
+
+// Get theme
+@function theme($key) {
+    @return map-get($theme, $key);
+}
+
+// Calculate spacing function
+@function spacing($value) {
+    @return $spacing * $value;
+}

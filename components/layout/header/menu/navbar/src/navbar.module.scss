@@ -1,0 +1,6 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    gap: spacing(1);
+}

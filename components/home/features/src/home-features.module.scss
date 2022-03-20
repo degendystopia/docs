@@ -1,0 +1,152 @@
+@use 'variables' as *;
+
+@keyframes degen-change {
+    5% {
+        background-image: url('/images/degens/1.png');
+    }
+    10% {
+        background-image: url('/images/degens/2.png');
+    }
+    15% {
+        background-image: url('/images/degens/3.png');
+    }
+    20% {
+        background-image: url('/images/degens/4.png');
+    }
+    25% {
+        background-image: url('/images/degens/5.png');
+    }
+    30% {
+        background-image: url('/images/degens/6.png');
+    }
+    35% {
+        background-image: url('/images/degens/7.png');
+    }
+    40% {
+        background-image: url('/images/degens/8.png');
+    }
+    45% {
+        background-image: url('/images/degens/9.png');
+    }
+    50% {
+        background-image: url('/images/degens/10.png');
+    }
+    55% {
+        background-image: url('/images/degens/11.png');
+    }
+    60% {
+        background-image: url('/images/degens/12.png');
+    }
+    65% {
+        background-image: url('/images/degens/13.png');
+    }
+    70% {
+        background-image: url('/images/degens/14.png');
+    }
+    75% {
+        background-image: url('/images/degens/15.png');
+    }
+    80% {
+        background-image: url('/images/degens/16.png');
+    }
+    85% {
+        background-image: url('/images/degens/17.png');
+    }
+    90% {
+        background-image: url('/images/degens/18.png');
+    }
+    95% {
+        background-image: url('/images/degens/19.png');
+    }
+    100% {
+        background-image: url('/images/degens/20.png');
+    }
+}
+
+.wrapper {
+    padding: spacing(2);
+    border-radius: spacing(1);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: spacing(3.5);
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+}
+
+.section {
+    display: flex;
+    gap: spacing(2);
+    flex-direction: column;
+
+    @media #{$mq-small} {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        min-width: 50%;
+        min-height: spacing(15);
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: spacing(1);
+
+        @media #{$mq-small} {
+            width: auto;
+        }
+    }
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        justify-content: center;
+    }
+}
+
+.degens {
+    display: block;
+    height: spacing(15);
+    width: spacing(15);
+    margin: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+
+    animation: degen-change 10s ease infinite;
+}
+
+.world {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    background-image: url('/images/city-scene.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.coins {
+    height: 180px;
+}
+
+.dao {
+    height: 180px;
+}

@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'sass:math';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap');
+
+@font-face {
+    font-family: Cybersomething-font;
+    src: url('/fonts/pixelfont.ttf');
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+    font-family: Cybersomething-font;
+}
+
+h2,
+.h2 {
+    font-size: $h2-font-size;
+    font-family: Cybersomething-font;
+}
+
+h3,
+.h3 {
+    font-size: $h3-font-size;
+    font-family: Cybersomething-font;
+}
+
+h4,
+.h4 {
+    font-size: $h4-font-size;
+    font-family: Cybersomething-font;
+}
+
+h5,
+.h5 {
+    font-size: $h5-font-size;
+    font-family: Cybersomething-font;
+}
+
+h6,
+.h6 {
+    font-size: $h6-font-size;
+    font-family: Cybersomething-font;
+}

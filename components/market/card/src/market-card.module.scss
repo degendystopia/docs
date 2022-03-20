@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+.root {
+    background-color: rgba($color: #000000, $alpha: 0.25);
+    border-radius: spacing(1);
+    height: spacing(20);
+    width: spacing(15);
+    overflow: hidden;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: spacing(10);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: spacing(1);
+
+    img {
+        width: spacing(15);
+        height: spacing(15);
+    }
+}
+
+.name {
+    text-align: center;
+    padding: 0 spacing(1);
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+.type {
+    text-align: center;
+    padding: 0 spacing(1);
+
+    span {
+        font-size: 2rem;
+        font-weight: bold;
+        color: theme('primary');
+    }
+}

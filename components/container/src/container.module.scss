@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+.root {
+    margin: 0 5%;
+}
+
+.primary {
+    background-color: rgba($color: theme('secondary'), $alpha: 0.5);
+}
