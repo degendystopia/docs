@@ -24,7 +24,7 @@ Each DEGEN is of either COMMON, RARE, or MYTHIC rarity.
 
 The number of DEGEN tokens that can be minted at any time is capped according to the minting rules for the current generation.
 
-The first generation of DEGEN tokens have a supply of **999**:
+The first generation of DEGEN tokens will have a supply of **999**:
 
 * **900** COMMON DEGENs: for a mint price of 3 AVAX.
 * **90** RARE DEGENs: for a mint price of 15 AVAX.
