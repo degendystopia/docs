@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.root {
+    margin-top: spacing(4);
+    padding: spacing(1);
+}
+
+.container {
+    margin-top: spacing(1);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: spacing(2);
+    border-radius: spacing(1);
+}
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: spacing(1);
+}
+
+.user {
+    text-align: center;
+
+    .name {
+        font-weight: bold;
+        color: theme('primary');
+    }
+}
