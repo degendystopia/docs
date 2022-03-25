@@ -14,7 +14,7 @@ DDSCRAP that is spent on repairs is refunded to the game treasury to sustain pla
 
 ### Supply
 
-The DDSCRAP token is a fungible token with a fixed supply hard cap of 100,000,00.
+The DDSCRAP token is a fungible token with a fixed supply hard cap of 10,000,000.
 
 As Degen Dystopia evolves, DDSCRAP will deflationary mechanics, including being used crafting & repairing DYSTOPIANs, houses,&#x20;
 
