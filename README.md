@@ -4,19 +4,23 @@ description: Official Degen Dystopia Documentation - Last updated March 15, 2022
 
 # ☢ Degen Dystopia
 
-![](<.gitbook/assets/3 (3).png>)
+![     Ravaged landscapes stretch out in all directions. Burned-out buildings loom ominously over the alleys of abandoned cities. Corroded droids hunt down travelers foolish enough to wander through their domains. Survivors of long-forgotten wars scavenge together what little they can in the hopes of forging a new life in this desolate world.
+Welcome to the wasteland.
+Welcome to Degen Dystopia. ](<.gitbook/assets/3 (3).png>)
 
 ![](<.gitbook/assets/1 (1).png>)
 
-_`"Ravaged landscapes stretch out in all directions. Burned-out buildings loom ominously over the alleys of abandoned cities. Corroded droids hunt down travelers foolish enough to wander through their domain. Survivors of long-forgotten wars scavenge together what little they can in the hopes of forging a new life in this desolate world. Welcome to the Wasteland. Welcome to`**`Degen Dystopia`**`."`_
+**Degen Dystopia** is a post-apocalyptic, browser-based [MMORPG](https://en.wikipedia.org/wiki/Massively\_multiplayer\_online\_role-playing\_game) in which the players control their own in-game economy built on the Avalanche blockchain.
 
-**Degen Dystopia** is a post-apocalyptic, browser-based MMORPG in which players have full ownership of their assets and the player-run economy.
+The game consists of an **Open-World** 2D map in which players can explore, _level up_ their **NFT characters**, <mark style="color:purple;">**collect resources**</mark> (<mark style="color:green;">**ERC-20**</mark>), and <mark style="color:yellow;">**craft items**</mark> (<mark style="color:green;">**ERC-721**</mark>).
 
-The game consists of an **Open-World** 2D map in which players can explore, level up their **NFT characters**, <mark style="color:purple;">**collect resources**</mark> (<mark style="color:green;">**ERC-20**</mark>), and <mark style="color:yellow;">**craft items**</mark> (<mark style="color:green;">**ERC-721**</mark>).
+Players can <mark style="color:red;">**engage in combat**</mark> with the inhabitants of the **Degen Dystopia** world (PvE) as well as other players (PvP) in real-time to collect and compete for rewards.&#x20;
 
-Players can <mark style="color:red;">**engage in combat**</mark> with the inhabitants of the **Degen Dystopia** world (PvE) as well as other players (PvP) in real-time to collect and compete for rewards. <mark style="color:yellow;">**Craftable gear**</mark> gives players an edge in combat and survival, and unlocks new abilities and areas of the map to explore.
+<mark style="color:yellow;">**Craftable gear**</mark> gives players an edge in combat and survival, and unlocks new abilities and areas of the map to explore.
 
-**Degen Dystopia** features <mark style="color:red;">**Open-PVP Zones**</mark>, where players can kill each other **** and steal each other’s pending rewards. Open-PVP areas are restricted to specific zones <mark style="color:purple;">**rich in token rewards**</mark>, leaving plenty of room for casual players to play and earn while incentivizing competition and cooperation at the highest levels of play.
+<mark style="color:purple;">**Resource collection**</mark> allows players to accumulate ingredients used for crafting, research, combat and other abilties. Crafting resources are implemented as ERC-20 tokens for liquid exchange on decentralized marketplaces and use in other DeFi protocols.&#x20;
+
+**Degen Dystopia** features <mark style="color:red;">**Open-PVP Zones**</mark>, where players can kill each other **** and _loot_ each other’s pending rewards. Open-PVP areas are restricted to specific zones **rich in token rewards**, leaving plenty of room for casual players to play and earn while incentivizing competition and cooperation at the highest levels of play.
 
 The continuous flow between <mark style="color:yellow;">**resource collection**</mark> -> <mark style="color:purple;">**crafting**</mark> -> <mark style="color:red;">**combat**</mark> incentivizes players to specialize their builds, collaborate, and compete in real-time for wealth and territory in the persistent world of **Degen Dystopia**.
 
@@ -24,20 +28,20 @@ The continuous flow between <mark style="color:yellow;">**resource collection**<
 
 ![](.gitbook/assets/2.png)
 
-In our hearts, we are gamers. Sadly, we see the AAA game industry releasing the same games year after year with little more than visual upgrades. We have seen countless indie games over-promise and under-deliver. Gamers these days are filled with nostalgia for times when quality video games were consistently released by big companies and indie studios alike. We are driven by our passion to provide something original and fun to the gaming community.
+&#x20;         Innovation in the gaming industry has slowed to a crawl. The AAA game industry has become well-known for uninspired titles, [disappointing launches,](https://www.theguardian.com/games/2020/dec/18/cyberpunk-2077-how-2020s-biggest-video-game-launch-turned-into-a-shambles) and [releasing the same games year after year](http://www.original-gamer.com/index.php?action=article\&id=3147). Indie games have become infamous for [kickstarter rug-pulls](https://www.youtube.com/watch?v=wqM6zAGZ4dw) and early access games that [never get finished](https://www.theguardian.com/games/2019/jan/28/steam-early-access-first-wave-games-kenshi-valve). Gamers are filled with nostalgia for the times when amazing video games were plentiful and expectations for new releases were deservedly high. **Degen Dystopia** original and fun to the gaming community.
 
-Likewise, we are also crypto investors and developers. Much like in the world of gaming, we have seen many overinflated promises and underwhelming executions (as well as downright scams) in the crypto space. This is especially true when it comes to the loosely-defined spheres of "Crypto Gaming" & "GameFi."&#x20;
+Likewise, the crypto & blockchain spaces are filled with disappointing projects that either under-deliver or downright scam people. The well-hyped world of "Crypto Gaming" & "GameFi" are no exception.&#x20;
 
-At the time of writing, very few crypto projects calling themselves "games" actually have a playable game. Typically, these projects are simply gamified frontends for standard DeFi applications (DEX, yield farms, etc.). And out of those who do actually have some form of a playable game, these are usually little more than a cookie-cutter walking simulator cooked up in the likes of RPG Maker with zero actual gameplay, yet are somehow already selling plots of land at 0.5 ETH and up.&#x20;
+At the time of writing, few of the projects claiming to be "crypto games" have actually produced anything resembling a game. Most have are little more than gamified DeFi frontends. The few that do have "games" feel like they were made using Macromedia Flash, yet are somehow selling "plots of land" for 0.5 ETH and up.&#x20;
 
-It seems all anyone talks about these days in regards to crypto and gaming is how much of a "scam" it all is, or at best, how NFTs/crypto are "useless" and "unnecessary" in gaming. We are here to change that.
+It seems all anyone talks about these days in regards to crypto and gaming is how much of a "scam" it all is, or at best, how NFTs and crypto are "useless" and "unnecessary" in gaming. **Degen Dystopia** is here to change that.
 
-We believe _good games_ can be made by those willing to break out of the traditional genres. We believe good crypto projects can be made by those willing to put in work and deliver software _before_ asking users to invest their money, time, and energy. We believe that the viability of games, as well as economies built on those games, depend on the game actually being fun and engaging for players.
+It is time for teams to start delivering tangible products and stop the incessant shilling. The success of the project depends on the quality of the product, not on money raised or momentary hype.
 
-We believe that sustainable MMO game economies can be built. We believe a sustainable in-game economy must be based on the game's ability to deliver an exciting and enjoyable experience to its players. The game must evolve and grow with time, finding new ways to reward veteran players and introduce incentives for new players to interact and invest their time. As demonstrated by games such as Ultima Online, Runescape, EVE Online, and many others, competition and cooperation between players in the pursuit of in-game wealth naturally leads to the creation of player-run economies.&#x20;
+The MMO genre provides the perfect opportunity to build player-run economies. Building sustainable player-run economies _is possible_, but it hinges on the ability to deliver a compelling experience to players. The project must evolve and grow with time, improving the experience for the players and continuing to innovate itse design. As demonstrated by games such as [Ultima Online](https://mobiledevmemo.com/wp-content/uploads/2021/09/The-In-game-Economics-of-Ultima-Online.pdf), Runescape, and EVE Online, a solid foundation can give rise to epic player-run economies.&#x20;
 
-We will continue to develop **Degen Dystopia** per our long-term vision. Our community will watch us evolve steadily and sustainably, delivering real value progressively, avoiding the classic pump-and-dump mechanics that are all too common in the NFT/crypto space.
+**Degen Dystopia** is a long-term project with a long-term vision. Development will grow steadily and sustainably, delivering real value progressively, avoiding the classic pump-and-dump mechanics that are all too common in the NFT/crypto space.
 
-Through active development of the game, expansion of features such as crafting, tournaments, betting, an NFT rental system, minigames, partnerships, and much more, we can continually grow our incentives and rewards for players, attracting both the gamers who want to earn, and the earners who want to game.
+Through ongoing development, expansion of new features such as crafting, tournaments, betting, rentals system, minigames, partnerships, and much more, Degen Dystopia can continue to find innovate ways to drive revenue and sustain the ever-critical player rewards, attracting both the gamers who want to earn, and the earners who want to game.
 
-We believe that the strength of any project, especially in gaming and in crypto, is based on the value it can deliver to its users. Moreover, high-quality projects are where the strongest communities are formed. We hope to achieve and share these real values and utility with our players and investors, built on a foundation of a unique game that is loads of fun to play.
+The strength of any project deoends on the value it delivers to its users. Degen Dystopia will only continue grow its offerings to both players and investors, built on the foundation of a unique game that is actually fun to play.
