@@ -32,21 +32,14 @@ const GameComponent = () => {
         // useEffect is not an async function and therefore we cannot use any await functionality
         // directly. That is why we need to define our own async function and call it below.
         const init = async () => {
-            // Import phaser dynamically
-            const Phaser = await import('phaser')
-
-            // Example of importing phaser modules / plugins dynamically
-            // const { default: GameScene } = await import('../game/scenes/GameScene')
-            // const { default: GridEngine } = await import('grid-engine')
-
-            // Define game instance
-            const game = new Phaser.Game({
-                // ...configs,
-                parent: 'phaser-game',
-                // scene: [GameScene],
-                width: 400,
-                height: 200,
-            })
+            const mainScript = document.createElement('script')
+            mainScript.src = '/main.bundle.js'
+            mainScript.async = true
+            document.body.appendChild(mainScript)
+            const vendorScript = document.createElement('script')
+            vendorScript.src = '/vendors.bundle.js'
+            vendorScript.async = true
+            document.body.appendChild(vendorScript)
         }
 
         // Call our async function
