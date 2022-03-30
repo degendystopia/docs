@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+.root {
+    position: relative;
+    display: flex;
+    gap: spacing(1);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: spacing(2);
+    flex-grow: 1;
+}
+
+.degen {
+    display: none;
+    position: relative;
+    width: spacing(6);
+    flex-shrink: 0;
+
+    .image {
+        position: absolute;
+        width: spacing(10);
+        top: 0;
+        right: spacing(-1);
+        transform: scaleX(-1);
+    }
+    .box {
+        position: absolute;
+        top: spacing(10);
+        width: spacing(6);
+        height: spacing(6);
+        background: linear-gradient(
+            90deg,
+            rgba($color: theme('secondary'), $alpha: 1),
+            rgba($color: theme('primary'), $alpha: 1)
+        );
+        border-radius: spacing(0.25);
+    }
+
+    @media #{$mq-large} {
+        display: block;
+    }
+}
+
+.date {
+    position: absolute;
+    right: spacing(8);
+    top: spacing(-1);
+    padding: spacing(1);
+    background: linear-gradient(
+        90deg,
+        rgba($color: theme('secondary'), $alpha: 1),
+        rgba($color: theme('primary'), $alpha: 1)
+    );
+    border-radius: spacing(0.25);
+    font-weight: bold;
+
+    .black {
+        color: #000;
+    }
+}
+
+.icon {
+    width: spacing(1);
+    height: spacing(1);
+    background: linear-gradient(
+        90deg,
+        rgba($color: theme('secondary'), $alpha: 1),
+        rgba($color: theme('primary'), $alpha: 1)
+    );
+    border-radius: spacing(0.1);
+}

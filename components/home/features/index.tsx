@@ -49,12 +49,12 @@ const HomeFeatures = ({}: Props) => {
                     <div className={Classes.section}>
                         <div className={Classes.content}>
                             <div>
-                                <h4>
+                                <h2>
                                     Explore an{' '}
                                     <span className="text-primary">
                                         Open World
                                     </span>
-                                </h4>
+                                </h2>
                                 <p>
                                     Meet other players, harvest resources, craft
                                     equipment, forage for collectables, battle
@@ -63,12 +63,12 @@ const HomeFeatures = ({}: Props) => {
                             </div>
 
                             <div>
-                                <h4>
+                                <h2>
                                     <span className="text-primary">
                                         Level-Up
                                     </span>{' '}
                                     your NFTs
-                                </h4>
+                                </h2>
                                 <p>
                                     Degens, the playable characters of Degen
                                     Dystopia are NFTs that can be leveled up by
@@ -93,10 +93,10 @@ const HomeFeatures = ({}: Props) => {
 
                         <div className={Classes.content}>
                             <div>
-                                <h4>
+                                <h2>
                                     <span className="text-primary">Play</span>{' '}
                                     to Earn
-                                </h4>
+                                </h2>
                                 <p>
                                     Degen Dystopia is built for the players.
                                     This means maximum accessibility:
@@ -110,10 +110,10 @@ const HomeFeatures = ({}: Props) => {
                     <div className={Classes.section}>
                         <div className={Classes.content}>
                             <div>
-                                <h4>
+                                <h2>
                                     Open Governance{' '}
                                     <span className="text-primary">DAO</span>
-                                </h4>
+                                </h2>
                                 <p>
                                     Degen Dystopia is designed to be governed
                                     via DAO mechanics. Unlike other games, the

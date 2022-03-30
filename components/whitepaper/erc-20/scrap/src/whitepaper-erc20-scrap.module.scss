@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: spacing(2);
+}
+
+.title {
+    border-radius: spacing(1);
+    margin-bottom: spacing(1);
+    position: relative;
+
+    .scrap {
+        display: none;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: spacing(4);
+
+        @media #{$mq-small} {
+            display: block;
+        }
+    }
+
+    h2 {
+        display: block;
+        flex-grow: 1;
+        background: linear-gradient(
+            90deg,
+            rgba($color: theme('secondary'), $alpha: 0.5),
+            rgba($color: theme('primary'), $alpha: 0.5)
+        );
+        padding: 0 spacing(1);
+        border-radius: spacing(0.25);
+
+        @media #{$mq-small} {
+            margin-left: spacing(2.5);
+        }
+    }
+}

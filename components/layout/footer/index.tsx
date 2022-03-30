@@ -17,7 +17,12 @@ const Footer = ({}: Props) => {
             <div className={Classes.lining} />
 
             <Container>
-                <div className={Classes.container}></div>
+                <div className={Classes.container}>
+                    <div className={Classes.love}>
+                        <span>Made with</span>
+                        <img alt="heart" src="/images/heart.png" />
+                    </div>
+                </div>
             </Container>
         </div>
     )

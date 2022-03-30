@@ -1,4 +1,5 @@
-import ComingSoon from '@/components/coming-soon'
+import Whitepaper from '@/components/whitepaper'
+import WhitePaperOverview from '@/components/whitepaper/overview'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -8,7 +9,9 @@ const WhitepaperPage: NextPage = () => {
             <Head>
                 <title>Degen Dystopia | Whitepaper</title>
             </Head>
-            <ComingSoon />
+            <Whitepaper>
+                <WhitePaperOverview />
+            </Whitepaper>
         </>
     )
 }

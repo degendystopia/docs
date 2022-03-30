@@ -2,18 +2,19 @@ import Classes from './src/list-menu-button.module.scss'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Clsx from 'clsx'
+import { ReactElement } from 'react'
 
 interface Props {
     name: string
     href?: string
-    icon?: string
+    icon?: ReactElement
 }
 
 const ListMenuButton = (props: Props) => {
     const router = useRouter()
 
     return props.href ? (
-        <Link href={props.href} scroll={false}>
+        <Link href={props.href} scroll={true}>
             <a
                 className={Clsx(
                     Classes.root,

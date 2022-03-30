@@ -4,6 +4,7 @@ import Title from '../title'
 import MarketCard from './card'
 import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
+import DegensTokenABI from '@/tokens/degens'
 
 // Skip typechecking on the window object
 declare let window: any
@@ -15,19 +16,69 @@ const Account = () => {
     // local states
     const [address, setAddress] = useState<string>('')
 
+    //
     const getData = async () => {
-        // A Web3Provider wraps a standard Web3 provider, which is
-        // what MetaMask injects as window.ethereum into each page
+        // Create a new ethers.js instance
         const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-        const getConnectedAddress = await provider.listAccounts()
+        // Request permissions to connect to user account
+        await provider.send('eth_requestAccounts', [])
 
-        setAddress(getConnectedAddress[0])
+        // Define signer
+        const signer = provider.getSigner()
+
+        // Get the connected user address
+        const userAddress = await signer.getAddress()
+
+        // If address is null in state
+        if (!address) {
+            // Store the user address in state
+            setAddress(userAddress)
+        }
+
+        // Initialize degens contract
+        const DegensContract = new ethers.Contract(
+            '0x2a014dFF1e035B0B622689bCc599b60E34AACf11',
+            DegensTokenABI,
+            signer,
+        )
+
+        // if address is not null (if user is logged in)
+        if (address) {
+            // Get owned degen tokens by user address
+            const getDegenTokens = await DegensContract.ownedTokens(address)
+
+            console.log(getDegenTokens)
+
+            // Get data from contract
+            const data = await DegensContract.getDegenToken(0)
+
+            // Get token uri from contract
+            const uri = await DegensContract.tokenURI('0')
+
+            // Console log the data
+            console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
+            console.log(uri) // empty string
+
+            // For each token id, get degen meta data
+            getDegenTokens.forEach(async (id: string) => {
+                // Get data from contract
+                const data = await DegensContract.getDegenToken(1)
+
+                // Get token uri from contract
+                const uri = await DegensContract.tokenURI(1)
+
+                // Console log the data
+                console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
+                console.log(uri) // empty string
+            })
+        }
     }
 
     useEffect(() => {
         getData()
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [address])
 
     /**
      * MOCKUP
