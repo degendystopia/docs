@@ -81,9 +81,12 @@ const Whitepaper = ({ children }: Props) => {
                 />
 
                 <div className={Classes.container}>
-                    <div id="sticky-end" />
-                    <div className={Classes.menu}>
-                        <Sticky enabled={true} top={50} bottomBoundary={0}>
+                    <div className={Classes.menu} id="sidebar">
+                        <Sticky
+                            enabled={true}
+                            top={0}
+                            bottomBoundary="#sidebar"
+                        >
                             <div className={Classes['menu-container']}>
                                 {navigation.map((item, index) => {
                                     return (
