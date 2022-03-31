@@ -37,15 +37,15 @@ const GameComponent = () => {
              * --------------
              * What i did to make it work
              * 1) i cloned the repo from github in the root directory
-             * 2) I installed the repo using "npm i ./phaser3-project-template"
-             * 3) I added some test exports inside of phaser3-project-template -> src -> index.js as thats the entry file
+             * 2) I installed the repo using "npm i ./phaser3-project"
+             * 3) I added some test exports inside of phaser3-project -> src -> index.js as thats the entry file
              * 4) the rest should explain itself haha
              */
 
             /**
              * Importing the local dependency will automaticaly initialize the phaser instance
              */
-            const dd = await import('phaser3-project-template')
+            const dd = await import('phaser3-project')
 
             dd.runGame() // another test - you can delete this
 
