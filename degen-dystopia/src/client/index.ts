@@ -1,10 +1,10 @@
-import Start from "./game"
+import Start from './game'
 
 window.addEventListener('load', () => {
-    rungame()    
+    runGame()
 })
 
-export function rungame() {
+export const runGame = function () {
     // initialize dependencies and inject into ui
 
     // connect to server
@@ -12,12 +12,9 @@ export function rungame() {
     // connect to contract
 
     // create UI and inject
+
     Start()
 }
 
 // export default { rungame: rungame }
 export const test = 'test'
-
-export const runGame = () => {
-    console.log('running game...')
-}

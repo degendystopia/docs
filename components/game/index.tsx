@@ -45,9 +45,7 @@ const GameComponent = () => {
             /**
              * Importing the local dependency will automaticaly initialize the phaser instance
              */
-            const dd = await import('phaser3-project')
-
-            dd.runGame() // another test - you can delete this
+            const dd = await import('degen-dystopia')
 
             console.log(dd.test) // another test - you can delete this
         }
