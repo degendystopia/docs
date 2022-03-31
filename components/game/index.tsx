@@ -1,6 +1,6 @@
 import Classes from './src/game.module.scss'
 import Container from '@/components/container'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Button from '@/components/button'
 
 /**
@@ -17,6 +17,8 @@ declare global {
  * Game component
  */
 const GameComponent = () => {
+    const [loaded, setLoaded] = useState(false)
+
     /**
      * Phaser JS
      * ----------
@@ -32,26 +34,19 @@ const GameComponent = () => {
         // useEffect is not an async function and therefore we cannot use any await functionality
         // directly. That is why we need to define our own async function and call it below.
         const init = async () => {
-            /**
-             * MONKEE NOTES:
-             * --------------
-             * What i did to make it work
-             * 1) i cloned the repo from github in the root directory
-             * 2) I installed the repo using "npm i ./phaser3-project"
-             * 3) I added some test exports inside of phaser3-project -> src -> index.js as thats the entry file
-             * 4) the rest should explain itself haha
-             */
+            // Import phaser dynamically
+            const Phaser = await import('phaser')
+            // Import phaser config from DD
+            const { phaserConfig } = await import('degen-dystopia')
 
-            /**
-             * Importing the local dependency will automaticaly initialize the phaser instance
-             */
-            const dd = await import('degen-dystopia')
-
-            console.log(dd.test) // another test - you can delete this
+            // Define game instance
+            const game = new Phaser.Game(phaserConfig)
         }
 
         // Call our async function
         init()
+
+        return () => {}
     }, [])
 
     // Toggle Full Screen
@@ -77,7 +72,7 @@ const GameComponent = () => {
         <Container>
             <div className={Classes.root}>
                 {/* note: we have to make this responsive using javascript */}
-                <div id="phaser-game" className={Classes.game} />
+                <div id="phaser-game" />
 
                 <div className={Classes.actions}>
                     <Button

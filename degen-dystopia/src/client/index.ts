@@ -1,20 +1,12 @@
-import Start from './game'
+import { config } from './game'
 
 window.addEventListener('load', () => {
     runGame()
 })
 
 export const runGame = function () {
-    // initialize dependencies and inject into ui
-
-    // connect to server
-
-    // connect to contract
-
-    // create UI and inject
-
-    Start()
+    console.log('game running')
 }
 
-// export default { rungame: rungame }
+export const phaserConfig = config
 export const test = 'test'
