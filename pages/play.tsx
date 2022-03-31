@@ -8,6 +8,7 @@ const PlayPage: NextPage = () => {
             <Head>
                 <title>Degen Dystopia | Game</title>
             </Head>
+
             <GameComponent />
         </>
     )

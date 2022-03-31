@@ -32,14 +32,24 @@ const GameComponent = () => {
         // useEffect is not an async function and therefore we cannot use any await functionality
         // directly. That is why we need to define our own async function and call it below.
         const init = async () => {
-            const mainScript = document.createElement('script')
-            mainScript.src = '/main.bundle.js'
-            mainScript.async = true
-            document.body.appendChild(mainScript)
-            const vendorScript = document.createElement('script')
-            vendorScript.src = '/vendors.bundle.js'
-            vendorScript.async = true
-            document.body.appendChild(vendorScript)
+            /**
+             * MONKEE NOTES:
+             * --------------
+             * What i did to make it work
+             * 1) i cloned the repo from github in the root directory
+             * 2) I installed the repo using "npm i ./phaser3-project-template"
+             * 3) I added some test exports inside of phaser3-project-template -> src -> index.js as thats the entry file
+             * 4) the rest should explain itself haha
+             */
+
+            /**
+             * Importing the local dependency will automaticaly initialize the phaser instance
+             */
+            const dd = await import('phaser3-project-template')
+
+            dd.runGame() // another test - you can delete this
+
+            console.log(dd.test) // another test - you can delete this
         }
 
         // Call our async function
