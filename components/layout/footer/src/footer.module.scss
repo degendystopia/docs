@@ -29,13 +29,19 @@
     align-items: center;
     gap: spacing(1);
     justify-content: center;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    margin-top: spacing(2);
+    border-top-left-radius: spacing(0.25);
+    border-top-right-radius: spacing(0.25);
 
     .love {
-        background-color: rgba($color: #fff, $alpha: 0.1);
-        padding: spacing(2) spacing(3);
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: spacing(2);
+        gap: spacing(1);
+
+        img {
+            width: spacing(2);
+        }
     }
 }

@@ -44,35 +44,35 @@ const Account = () => {
         )
 
         // if address is not null (if user is logged in)
-        if (address) {
-            // Get owned degen tokens by user address
-            const getDegenTokens = await DegensContract.ownedTokens(address)
+        // if (address) {
+        //     // Get owned degen tokens by user address
+        //     const getDegenTokens = await DegensContract.ownedTokens(address)
 
-            console.log(getDegenTokens)
+        //     console.log(getDegenTokens)
 
-            // Get data from contract
-            const data = await DegensContract.getDegenToken(0)
+        //     // Get data from contract
+        //     const data = await DegensContract.getDegenToken(0)
 
-            // Get token uri from contract
-            const uri = await DegensContract.tokenURI('0')
+        //     // Get token uri from contract
+        //     const uri = await DegensContract.tokenURI('0')
 
-            // Console log the data
-            console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
-            console.log(uri) // empty string
+        //     // Console log the data
+        //     console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
+        //     console.log(uri) // empty string
 
-            // For each token id, get degen meta data
-            getDegenTokens.forEach(async (id: string) => {
-                // Get data from contract
-                const data = await DegensContract.getDegenToken(1)
+        //     // For each token id, get degen meta data
+        //     getDegenTokens.forEach(async (id: string) => {
+        //         // Get data from contract
+        //         const data = await DegensContract.getDegenToken(1)
 
-                // Get token uri from contract
-                const uri = await DegensContract.tokenURI(1)
+        //         // Get token uri from contract
+        //         const uri = await DegensContract.tokenURI(1)
 
-                // Console log the data
-                console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
-                console.log(uri) // empty string
-            })
-        }
+        //         // Console log the data
+        //         console.log(data) // Internal JSON-RPC error: code: -32603 "execution reverted"
+        //         console.log(uri) // empty string
+        //     })
+        // }
     }
 
     useEffect(() => {
