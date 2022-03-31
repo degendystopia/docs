@@ -7,7 +7,15 @@ const WhitepaperPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Degen Dystopia | Whitepaper</title>
+                <title>Whitepaper | Degen Dystopia</title>
+                <meta
+                    property="og:title"
+                    content="Whitepaper | Degen Dystopia"
+                />
+                <meta
+                    property="og:url"
+                    content="https://degendystopia.world/whitepaper"
+                />
             </Head>
             <Whitepaper>
                 <WhitePaperOverview />

@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
+}
+
+.section {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: spacing(2);
+}
+
+.container {
+    display: flex;
+    gap: spacing(1);
+
+    .img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: spacing(1);
+        padding: spacing(1);
+        min-width: spacing(15);
+        min-height: spacing(10);
+        gap: spacing(2);
+
+        img {
+            min-width: spacing(5);
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.title {
+    border-radius: spacing(1);
+    margin-bottom: spacing(1);
+    position: relative;
+
+    .degen {
+        display: none;
+        left: spacing(-3);
+        bottom: 0;
+        position: absolute;
+        width: spacing(9);
+
+        @media #{$mq-small} {
+            display: block;
+        }
+    }
+
+    h2 {
+        display: block;
+        flex-grow: 1;
+        background: linear-gradient(
+            90deg,
+            rgba($color: theme('secondary'), $alpha: 0.5),
+            rgba($color: theme('primary'), $alpha: 0.5)
+        );
+        padding: 0 spacing(1);
+        border-radius: spacing(0.25);
+
+        @media #{$mq-small} {
+            margin-left: spacing(2);
+        }
+    }
+}
+
+.arrow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: spacing(0.25) spacing(1);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: spacing(1);
+}

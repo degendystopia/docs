@@ -6,7 +6,12 @@ const PlayPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Degen Dystopia | Game</title>
+                <title>Play | Degen Dystopia</title>
+                <meta property="og:title" content="Play | Degen Dystopia" />
+                <meta
+                    property="og:url"
+                    content="https://degendystopia.world/play"
+                />
             </Head>
 
             <GameComponent />

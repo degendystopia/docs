@@ -7,7 +7,12 @@ const WhitePaperErc721Page: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Degen Dystopia | ERC-721</title>
+                <title>ERC-721 | Degen Dystopia</title>
+                <meta property="og:title" content="ERC-721 | Degen Dystopia" />
+                <meta
+                    property="og:url"
+                    content="https://degendystopia.world/whitepaper/erc-721"
+                />
             </Head>
             <Whitepaper>
                 <WhitepaperErc721 />

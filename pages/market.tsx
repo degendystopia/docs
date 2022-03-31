@@ -6,7 +6,12 @@ const MarketPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Degen Dystopia | Market</title>
+                <title>Market | Degen Dystopia</title>
+                <meta property="og:title" content="Market | Degen Dystopia" />
+                <meta
+                    property="og:url"
+                    content="https://degendystopia.world/market"
+                />
             </Head>
             <Market />
         </>

@@ -1,7 +1,11 @@
 @use 'variables' as *;
 
 .root {
-    margin: 0 5%;
+    margin: 0 1%;
+
+    @media #{$mq-xxlarge} {
+        margin: 0 5%;
+    }
 }
 
 .primary {

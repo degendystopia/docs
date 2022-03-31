@@ -25,6 +25,7 @@ const HomeFeatures = ({}: Props) => {
 
                         <div className={Classes.content}>
                             <ListMenu
+                                font="pixel"
                                 buttons={[
                                     {
                                         name: 'EXPLORE',

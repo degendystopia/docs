@@ -7,7 +7,12 @@ const WhitepaperRoadmapPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Degen Dystopia | Roadmap</title>
+                <title>Roadmap | Degen Dystopia</title>
+                <meta property="og:title" content="Roadmap | Degen Dystopia" />
+                <meta
+                    property="og:url"
+                    content="https://degendystopia.world/whitepaper/roadmap"
+                />
             </Head>
             <Whitepaper>
                 <WhitePaperRoadmap />

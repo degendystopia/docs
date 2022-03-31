@@ -13,42 +13,56 @@ interface Props {
  */
 const RoadmapPhase3 = () => {
     return (
-        <div className={Classes.root}>
-            <div className={Classes.section}>
-                <div className={Classes.date}>
-                    <span className={Classes.black}>Q1</span> 2023
-                </div>
-
-                <div className={Classes.heading}>
-                    <h2 className="text-secondary">Phase 3</h2>
-                    <b>Sustainable Economics & Deflation</b>
-                </div>
-                <ListMenu
-                    buttons={[
-                        {
-                            name: 'Betting system (bet on DEGENS to earn rewards).',
-                            icon: <span className={Classes.icon} />,
-                        },
-                        {
-                            name: 'Tournament system (enter & compete for rewards).',
-                            icon: <span className={Classes.icon} />,
-                        },
-                        {
-                            name: 'Housing & Land system (players-come-first).',
-                            icon: <span className={Classes.icon} />,
-                        },
-                        {
-                            name: 'DYSTOPIAN fusions (merge two DYSTOPIANs to create 1 more powerful version).',
-                            icon: <span className={Classes.icon} />,
-                        },
-                        {
-                            name: 'NFT Marketplace for trading DEGENs and DYSTOPIANs.',
-                            icon: <span className={Classes.icon} />,
-                        },
-                    ]}
-                />
-
+        <>
+            <div className={Classes.root}>
                 <div className={Classes.section}>
+                    <div className={Classes.date}>
+                        <span className={Classes.black}>Q1</span> 2023
+                    </div>
+
+                    <div className={Classes.heading}>
+                        <h2 className="text-secondary">Phase 3</h2>
+                        <b>Sustainable Economics & Deflation</b>
+                    </div>
+                    <ListMenu
+                        buttons={[
+                            {
+                                name: 'Betting system (bet on DEGENS to earn rewards).',
+                                icon: <span className={Classes.icon} />,
+                            },
+                            {
+                                name: 'Tournament system (enter & compete for rewards).',
+                                icon: <span className={Classes.icon} />,
+                            },
+                            {
+                                name: 'Housing & Land system (players-come-first).',
+                                icon: <span className={Classes.icon} />,
+                            },
+                            {
+                                name: 'DYSTOPIAN fusions (merge two DYSTOPIANs to create 1 more powerful version).',
+                                icon: <span className={Classes.icon} />,
+                            },
+                            {
+                                name: 'NFT Marketplace for trading DEGENs and DYSTOPIANs.',
+                                icon: <span className={Classes.icon} />,
+                            },
+                        ]}
+                    />
+                </div>
+
+                <div className={Classes.degen}>
+                    <img
+                        className={Classes.image}
+                        src="/images/degens/12.png"
+                        alt="Degen"
+                    />
+
+                    <div className={Classes.box} />
+                </div>
+            </div>
+
+            <div className={Classes.section}>
+                <p>
                     As Degen Dystopia continues to grow, we will focus on
                     developing features that add sustainability and inflow of
                     revenue into the game&apos;s rewards treasury. Betting and
@@ -60,19 +74,9 @@ const RoadmapPhase3 = () => {
                     along with token fusions will increase demand for Degen
                     Dystopia&apos;s resources, opening room for new token mints
                     without creating inflation.
-                </div>
+                </p>
             </div>
-
-            <div className={Classes.degen}>
-                <img
-                    className={Classes.image}
-                    src="/images/degens/12.png"
-                    alt="Degen"
-                />
-
-                <div className={Classes.box} />
-            </div>
-        </div>
+        </>
     )
 }
 
