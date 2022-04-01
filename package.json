@@ -11,9 +11,10 @@
     },
     "dependencies": {
         "clsx": "^1.1.1",
-        "degen-dystopia": "file:degen-dystopia",
         "ethers": "^5.6.1",
         "next": "12.1.0",
+        "next-compose-plugins": "^2.2.1",
+        "next-transpile-modules": "^9.0.0",
         "phaser": "^3.55.2",
         "react": "17.0.2",
         "react-dom": "17.0.2",

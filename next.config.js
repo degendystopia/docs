@@ -1,4 +1,6 @@
 const path = require('path')
+const withPlugins = require('next-compose-plugins')
+const withTM = require('next-transpile-modules')(['degen-dystopia'])
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,4 +10,10 @@ const nextConfig = {
     },
 }
 
-module.exports = nextConfig
+module.exports = withPlugins(
+    [
+        // add plugins here..
+        withTM,
+    ],
+    nextConfig,
+)
