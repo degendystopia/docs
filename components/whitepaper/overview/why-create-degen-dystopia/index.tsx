@@ -138,7 +138,7 @@ const WhitePaperWhyCreateDegenDystopia = () => {
                     who want to earn, and the earners who want to game.
                     <br />
                     <br />
-                    The strength of any project deoends on the value it delivers
+                    The strength of any project depends on the value it delivers
                     to its users. Degen Dystopia will only continue grow its
                     offerings to both players and investors, built on the
                     foundation of a unique game that is actually fun to play.

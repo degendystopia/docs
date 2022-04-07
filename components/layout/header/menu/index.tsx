@@ -58,7 +58,7 @@ const Menu = () => {
         },
         {
             name: 'Whitepaper',
-            url: '/whitepaper',
+            url: 'https://docs.degendystopia.world',
         },
         {
             name: 'Market',

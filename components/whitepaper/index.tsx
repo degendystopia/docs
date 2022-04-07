@@ -16,6 +16,23 @@ interface Props {
  * Whitepaper component
  */
 const Whitepaper = ({ children }: Props) => {
+    return (
+        <Container>
+            <div className={Classes.root}>
+                <Title
+                    variant="dark"
+                    name="Whitepaper | V1.0.0"
+                    align="center"
+                />
+
+                <div className={Classes.container}>
+                    <iframe src="https://docs.degendystopia.world/" />
+                </div>
+            </div>
+        </Container>
+    )
+}
+const whitepaper = ({ children }: Props) => {
     const navigation = [
         {
             title: 'General',

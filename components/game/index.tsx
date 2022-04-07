@@ -34,13 +34,8 @@ const GameComponent = () => {
         // useEffect is not an async function and therefore we cannot use any await functionality
         // directly. That is why we need to define our own async function and call it below.
         const init = async () => {
-            // Import phaser dynamically
-            const Phaser = await import('phaser')
-            // Import phaser config from DD
-            const { phaserConfig } = await import('degen-dystopia')
-
-            // Define game instance
-            const game = new Phaser.Game(phaserConfig)
+            // Import DD
+            await import('degen-dystopia')
         }
 
         // Call our async function
