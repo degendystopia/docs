@@ -58,7 +58,7 @@ const Menu = () => {
         },
         {
             name: 'Whitepaper',
-            url: '/whitepaper',
+            url: 'https://docs.degendystopia.world',
         },
         {
             name: 'Market',
@@ -77,9 +77,7 @@ const Menu = () => {
                             <Button
                                 name="My Account"
                                 variant="light"
-                                icon={
-                                    <img src="/images/heart.png" alt="heart" />
-                                }
+                                icon={<img src="/images/heart.png" alt="heart" />}
                             />
                         </a>
                     </Link>

@@ -51,29 +51,21 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    Explore an{' '}
-                                    <span className="text-primary">
-                                        Open World
-                                    </span>
+                                    Explore an <span className="text-primary">Open World</span>
                                 </h2>
                                 <p>
-                                    Meet other players, harvest resources, craft
-                                    equipment, forage for collectables, battle
-                                    in open-world PVP
+                                    Meet other players, harvest resources, craft equipment, forage
+                                    for collectables, battle in open-world PVP
                                 </p>
                             </div>
 
                             <div>
                                 <h2>
-                                    <span className="text-primary">
-                                        Level-Up
-                                    </span>{' '}
-                                    your NFTs
+                                    <span className="text-primary">Level-Up</span> your NFTs
                                 </h2>
                                 <p>
-                                    Degens, the playable characters of Degen
-                                    Dystopia are NFTs that can be leveled up by
-                                    playing the game.
+                                    Degens, the playable characters of Degen Dystopia are NFTs that
+                                    can be leveled up by playing the game.
                                 </p>
                             </div>
                         </div>
@@ -85,23 +77,18 @@ const HomeFeatures = ({}: Props) => {
 
                     <div className={Classes.section}>
                         <div className={Classes.image}>
-                            <img
-                                src="/images/coins.png"
-                                className={Classes.coins}
-                                alt="coins"
-                            />
+                            <img src="/images/gold.png" className={Classes.coins} alt="coins" />
+                            <img src="/images/scrap.png" className={Classes.coins} alt="coins" />
                         </div>
 
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    <span className="text-primary">Play</span>{' '}
-                                    to Earn
+                                    <span className="text-primary">Play</span> to Earn
                                 </h2>
                                 <p>
-                                    Degen Dystopia is built for the players.
-                                    This means maximum accessibility:
-                                    browser-based, mobile-friendly, low-cost of
+                                    Degen Dystopia is built for the players. This means maximum
+                                    accessibility: browser-based, mobile-friendly, low-cost of
                                     entry, and play-to-earn mechanics.
                                 </p>
                             </div>
@@ -112,26 +99,34 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    Open Governance{' '}
-                                    <span className="text-primary">DAO</span>
+                                    Crafting <span className="text-primary">DYSTOPIANs</span>
                                 </h2>
-                                <p>
-                                    Degen Dystopia is designed to be governed
-                                    via DAO mechanics. Unlike other games, the
-                                    players will choose the way the game
-                                    evolves, both from within the game, as well
-                                    as by the ability to propose and vote on
-                                    changes to Degen Dystopia itself.
-                                </p>
+                                <p>Craft NFT minions and command them in battle.</p>
                             </div>
                         </div>
 
                         <div className={Classes.image}>
-                            <img
-                                src="/images/scroll.png"
-                                className={Classes.dao}
-                                alt="coins"
-                            />
+                            <img src="/images/dystopian.gif" className={Classes.dao} alt="coins" />
+                        </div>
+                    </div>
+
+                    <div className={Classes.section}>
+                        <div className={Classes.image}>
+                            <img src="/images/scroll.png" className={Classes.dao} alt="coins" />
+                        </div>
+
+                        <div className={Classes.content}>
+                            <div>
+                                <h2>
+                                    Open Governance <span className="text-primary">DAO</span>
+                                </h2>
+                                <p>
+                                    Degen Dystopia is designed to be governed via DAO mechanics.
+                                    Unlike other games, the players will choose the way the game
+                                    evolves, both from within the game, as well as by the ability to
+                                    propose and vote on changes to Degen Dystopia itself.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
