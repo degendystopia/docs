@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "clsx": "^1.1.1",
+        "degen-dystopia": "file:../../geobois",
         "ethers": "^5.6.1",
         "next": "12.1.0",
         "next-compose-plugins": "^2.2.1",

@@ -14,7 +14,7 @@ const WhitepaperPage: NextPage = () => {
                 />
                 <meta
                     property="og:url"
-                    content="https://degendystopia.world/whitepaper"
+                    content="https://docs.degendystopia.world"
                 />
             </Head>
             <Whitepaper>

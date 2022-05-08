@@ -32,6 +32,7 @@ const Whitepaper = ({ children }: Props) => {
         </Container>
     )
 }
+
 const whitepaper = ({ children }: Props) => {
     const navigation = [
         {
