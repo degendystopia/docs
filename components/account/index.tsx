@@ -1,13 +1,26 @@
 import Classes from './src/account.module.scss'
 import Container from '@/components/container'
 import Title from '../title'
-import MarketCard from './card'
+import MarketCard from '../market/card'
 import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 import DegensTokenABI from '@/tokens/degens'
+import Modal from '../modal'
 
 // Skip typechecking on the window object
 declare let window: any
+
+type Stat = {
+    name: string
+    value: string
+}
+
+interface dummyData {
+    name: string
+    image: string
+    type: string
+    stats: Stat[]
+}
 
 /**
  * Account component
@@ -15,6 +28,34 @@ declare let window: any
 const Account = () => {
     // local states
     const [address, setAddress] = useState<string>('')
+    const [modal, setModal] = useState<object>({})
+
+    const dummyData: dummyData[] = [
+        {
+            name: 'Shono Pol',
+            image: '/images/degens/1.png',
+            type: 'rare',
+            stats: [
+                {
+                    name: 'magic',
+                    value: '14',
+                },
+                {
+                    name: 'crafting',
+                    value: '19',
+                },
+                {
+                    name: 'damage',
+                    value: '24',
+                },
+
+                {
+                    name: 'murders',
+                    value: '18',
+                },
+            ],
+        },
+    ]
 
     //
     const getData = async () => {
@@ -92,26 +133,64 @@ const Account = () => {
 
                 <div className={Classes.container}>
                     <div className={Classes.user}>
-                        <span className={Classes.name}>User:</span>{' '}
-                        <strong>{address}</strong>
+                        <div className={Classes.box}>
+                            <span className={Classes.name}>User:</span>{' '}
+                            <strong>0x...{address.slice(address.length - 5)}</strong>
+                        </div>
+
+                        <div className={Classes.box}>
+                            <span className={Classes.name}>Gold:</span> <strong>11</strong>
+                        </div>
+
+                        <div className={Classes.box}>
+                            <span className={Classes.name}>Scrap:</span> <strong>17</strong>
+                        </div>
                     </div>
 
-                    <div className={Classes.user}>
-                        You currently have the following degens:
-                    </div>
+                    <div className={Classes.center}>Your DEGENs:</div>
 
                     <div className={Classes.listings}>
-                        <MarketCard
-                            name="Monkee Man"
-                            image="/images/degens/15.png"
-                            type="Rare"
-                        />
+                        {dummyData.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    <MarketCard
+                                        name={item.name}
+                                        image={item.image}
+                                        type={item.type}
+                                        onClick={() => setModal({ [index]: true })}
+                                    />
+                                    <Modal
+                                        name={item.name}
+                                        open={modal[index]}
+                                        close={() => setModal({ [index]: false })}
+                                    >
+                                        <div className={Classes.modal}>
+                                            <div className={Classes.degen}>
+                                                <img src={item.image} alt={item.name} />
+                                            </div>
+                                            <div className={Classes.stats}>
+                                                {item.stats.map((stat, statIndex) => {
+                                                    return (
+                                                        <div
+                                                            key={statIndex}
+                                                            className={Classes.box}
+                                                        >
+                                                            <span className={Classes.name}>
+                                                                {stat.name}:
+                                                            </span>
 
-                        <MarketCard
-                            name="The Zombie Of Atlanta"
-                            image="/images/degens/19.png"
-                            type="Mythic"
-                        />
+                                                            <span className={Classes.value}>
+                                                                {stat.value}
+                                                            </span>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+                                    </Modal>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

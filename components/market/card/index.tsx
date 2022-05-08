@@ -7,14 +7,15 @@ interface Props {
     image: string
     name: string
     type: string
+    onClick?(): any
 }
 
 /**
  * Market Card component
  */
-const MarketCard = ({ image, name, type }: Props) => {
+const MarketCard = ({ image, name, type, onClick }: Props) => {
     return (
-        <div className={Classes.root}>
+        <div className={Classes.root} onClick={onClick}>
             <div className={Classes.image}>
                 <img src={image} alt={name} />
             </div>

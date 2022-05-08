@@ -77,9 +77,7 @@ const Menu = () => {
                             <Button
                                 name="My Account"
                                 variant="light"
-                                icon={
-                                    <img src="/images/heart.png" alt="heart" />
-                                }
+                                icon={<img src="/images/heart.png" alt="heart" />}
                             />
                         </a>
                     </Link>

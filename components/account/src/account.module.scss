@@ -21,10 +21,56 @@
 }
 
 .user {
-    text-align: center;
+    display: flex;
+    gap: spacing(1);
 
     .name {
         font-weight: bold;
         color: theme('primary');
+    }
+
+    .box {
+        padding: spacing(1);
+        background-color: rgba($color: #000000, $alpha: 0.25);
+        border-radius: spacing(1);
+    }
+}
+
+.center {
+    font-weight: bold;
+    text-align: center;
+    padding: spacing(1);
+}
+
+.modal {
+    display: flex;
+    align-items: flex-start;
+
+    .degen {
+        flex-basis: spacing(10);
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .stats {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(0.25);
+
+        .box {
+            display: flex;
+            background-color: rgba($color: #000, $alpha: 0.25);
+            padding: spacing(0.25);
+            gap: spacing(1);
+
+            .name {
+                color: theme('primary');
+                font-weight: bold;
+            }
+        }
     }
 }
