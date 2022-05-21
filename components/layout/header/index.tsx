@@ -26,17 +26,11 @@ const Header = ({}: Props) => {
                     </div>
 
                     <div className={Classes.socials}>
-                        <a
-                            className={Classes.button}
-                            href="https://discord.gg/gQUrbGgyNh"
-                        >
+                        <a className={Classes.button} href="https://discord.gg/pQc9xwczW7">
                             <img src="/images/discord.png" alt="discord" />
                         </a>
 
-                        <a
-                            className={Classes.button}
-                            href="https://twitter.com/DegenDystopia"
-                        >
+                        <a className={Classes.button} href="https://twitter.com/DegenDystopia">
                             <img src="/images/twitter.png" alt="twitter" />
                         </a>
 
