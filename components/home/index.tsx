@@ -1,7 +1,7 @@
 import Classes from './src/home.module.scss'
-import Container from '../container'
 import HomeIntro from './intro'
 import HomeFeatures from './features'
+import Script from 'next/script'
 
 /**
  * Interfaces
@@ -34,6 +34,22 @@ const Home = ({}: Props) => {
                 <div className={Classes.bg} />
             </div>
 
+            <div>
+                {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-46JYD6CGK4"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-46JYD6CGK4');
+        `}
+                </Script>
+            </div>
             <HomeIntro />
             <HomeFeatures />
         </>
