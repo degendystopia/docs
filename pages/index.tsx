@@ -6,12 +6,9 @@ const HomePage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>A Post-Apocalyptic Metaverse | Degen Dystopia</title>
-                <meta
-                    property="og:title"
-                    content="Degen Dystopia | A Post-Apocalyptic Metaverse"
-                />
-                <meta property="og:url" content="https://degendystopia.world" />
+                <title>smol doomers</title>
+                <meta property="og:title" content="smol doomers  " />
+                <meta property="og:url" content="https://doomers.wtf" />
             </Head>
             <Home />
         </>

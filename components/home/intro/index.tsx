@@ -15,16 +15,31 @@ interface Props {
  */
 const HomeIntro = ({}: Props) => {
     return (
-        <div className={Classes.root}>
-            <Container>
-                <Title
-                    variant="light"
-                    name="A Post-Apocalyptic Metaverse"
-                    align="center"
-                />
-            </Container>
-            <div className={Classes.lining} />
-        </div>
+        <Container>
+            <div className={Classes.wrapper}>
+                <div className={Classes.root}>
+                    <div className={Classes.section}>
+                        <div className={Classes.content}></div>
+                    </div>
+                </div>
+                <div className={Classes.root}>
+                    <div className={Classes.section}>
+                        {/* <img className={Classes['wake-1']} src="/images/wake1.png" alt="wake1" /> */}
+                        <div className={Classes.image}>
+                            <div className={Classes['wake-1']}>
+                                <Container>
+                                    <Title
+                                        variant="light"
+                                        name="I need to wake up."
+                                        align="center"
+                                    />
+                                </Container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Container>
     )
 }
 

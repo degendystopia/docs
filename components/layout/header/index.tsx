@@ -22,7 +22,7 @@ const Header = ({}: Props) => {
                         <div className={Classes.image}>
                             <img src="/images/logo.png" alt="Degen Dystopia" />
                         </div>
-                        <h1>Degen Dystopia</h1>
+                        <h1>smol doomers</h1>
                     </div>
 
                     <div className={Classes.socials}>
@@ -30,15 +30,8 @@ const Header = ({}: Props) => {
                             <img src="/images/discord.png" alt="discord" />
                         </a>
 
-                        <a className={Classes.button} href="https://twitter.com/DegenDystopia">
+                        <a className={Classes.button} href="https://twitter.com/smoldoomers">
                             <img src="/images/twitter.png" alt="twitter" />
-                        </a>
-
-                        <a
-                            className={Classes.button}
-                            href="https://www.youtube.com/channel/UCVwhaWaHf7z6UC0iaNJoznA"
-                        >
-                            <img src="/images/youtube.png" alt="youtube" />
                         </a>
                     </div>
                 </div>

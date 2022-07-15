@@ -2,8 +2,16 @@
 
 .root {
     position: relative;
-    height: calc(100vh - spacing(12));
-    background-image: linear-gradient(theme('secondary'), theme('purple'));
+    height: calc(100vh - spacing(32));
+    background-image: linear-gradient(theme('primary'), theme('purple'));
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        justify-content: center;
+    }
 }
 
 .bg {
@@ -12,8 +20,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba($color: #fff, $alpha: 1);
-    mask-image: url('/images/pixels.svg');
+    // background-color: rgba($color: #fff, $alpha: 1);
+    // mask-image: url('/images/pixels.svg');
     mask-repeat: repeat;
     mask-size: 200px;
     z-index: 0;
@@ -31,17 +39,18 @@
     z-index: 1;
 }
 
-.explosion-1 {
+.missedout {
     position: absolute;
-    width: spacing(10);
-    height: 100%;
-    background-image: url('/images/explosion-1.png');
+    width: spacing(15);
+    height: 200%;
+    // background-image: url('/images/explosion-1.png');
+    background-image: url('/images/missedout.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
     left: 0;
     right: 0;
-    bottom: spacing(3);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
 }
@@ -141,11 +150,7 @@
 .mountains {
     position: absolute;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        theme('purple-brown'),
-        theme('secondary')
-    );
+    background: linear-gradient(90deg, theme('purple-brown'), theme('secondary'));
     mask-image: url('/images/mountain.svg');
     mask-repeat: repeat-x;
     mask-size: spacing(15);
@@ -254,6 +259,21 @@
     height: spacing(10);
     width: spacing(10);
     background-image: url('/images/degens/10.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    right: 5%;
+    bottom: spacing(4);
+    margin: auto;
+    z-index: 3;
+    transform: scaleX(-1);
+}
+
+.doomer-1 {
+    position: absolute;
+    height: spacing(10);
+    width: spacing(10);
+    background-image: url('/images/doomers/1.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;

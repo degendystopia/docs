@@ -1,65 +1,65 @@
 @use 'variables' as *;
 
-@keyframes degen-change {
+@keyframes doomers-change {
     5% {
-        background-image: url('/images/degens/1.png');
+        background-image: url('/images/doomers/1.webp');
     }
     10% {
-        background-image: url('/images/degens/2.png');
+        background-image: url('/images/doomers/2.webp');
     }
     15% {
-        background-image: url('/images/degens/3.png');
+        background-image: url('/images/doomers/3.webp');
     }
     20% {
-        background-image: url('/images/degens/4.png');
+        background-image: url('/images/doomers/4.webp');
     }
     25% {
-        background-image: url('/images/degens/5.png');
+        background-image: url('/images/doomers/5.webp');
     }
     30% {
-        background-image: url('/images/degens/6.png');
+        background-image: url('/images/doomers/6.webp');
     }
     35% {
-        background-image: url('/images/degens/7.png');
+        background-image: url('/images/doomers/7.webp');
     }
     40% {
-        background-image: url('/images/degens/8.png');
+        background-image: url('/images/doomers/8.webp');
     }
     45% {
-        background-image: url('/images/degens/9.png');
+        background-image: url('/images/doomers/9.webp');
     }
     50% {
-        background-image: url('/images/degens/10.png');
+        background-image: url('/images/doomers/10.webp');
     }
     55% {
-        background-image: url('/images/degens/11.png');
+        background-image: url('/images/doomers/11.webp');
     }
     60% {
-        background-image: url('/images/degens/12.png');
+        background-image: url('/images/doomers/12.webp');
     }
     65% {
-        background-image: url('/images/degens/13.png');
+        background-image: url('/images/doomers/13.webp');
     }
     70% {
-        background-image: url('/images/degens/14.png');
+        background-image: url('/images/doomers/14.webp');
     }
     75% {
-        background-image: url('/images/degens/15.png');
+        background-image: url('/images/doomers/15.webp');
     }
     80% {
-        background-image: url('/images/degens/16.png');
+        background-image: url('/images/doomers/16.webp');
     }
     85% {
-        background-image: url('/images/degens/17.png');
+        background-image: url('/images/doomers/17.webp');
     }
     90% {
-        background-image: url('/images/degens/18.png');
+        background-image: url('/images/doomers/18.webp');
     }
     95% {
-        background-image: url('/images/degens/19.png');
+        background-image: url('/images/doomers/19.webp');
     }
     100% {
-        background-image: url('/images/degens/20.png');
+        background-image: url('/images/doomers/20.webp');
     }
 }
 
@@ -111,7 +111,7 @@
     }
 }
 
-.degens {
+.doomers {
     display: block;
     height: spacing(15);
     width: spacing(15);
@@ -120,8 +120,9 @@
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 0;
+    border-radius: 25px;
 
-    animation: degen-change 10s ease infinite;
+    animation: doomers-change 10s ease infinite;
 }
 
 .world {

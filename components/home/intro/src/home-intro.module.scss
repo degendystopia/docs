@@ -13,11 +13,79 @@
 .lining {
     display: block;
     position: absolute;
-    background-image: url('/images/pixels-lining.svg');
+    // background-image: url('/images/pixels-lining.svg');
     background-repeat: repeat-x;
     bottom: spacing(-2.5);
     left: 0;
     right: 0;
     height: spacing(5);
     z-index: 1;
+}
+
+.wrapper {
+    padding: spacing(1);
+    border-radius: spacing(1);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: spacing(2.5);
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: spacing(2);
+    flex-direction: column;
+
+    @media #{$mq-small} {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        min-height: spacing(15);
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: spacing(1);
+
+        @media #{$mq-small} {
+            width: auto;
+        }
+    }
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        justify-content: center;
+    }
+}
+
+.wake-1 {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 95%;
+    min-height: 95%;
+    background-image: url('/images/wake1.png');
+    border-radius: spacing(5);
+
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // background-position: bottom;
+    // left: 5%;
+    // bottom: spacing(4);
+    // margin: auto;
+    // z-index: 3;
 }

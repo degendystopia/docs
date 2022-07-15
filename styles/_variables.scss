@@ -31,13 +31,14 @@ $mq-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
 
 // Theme
 $theme: (
-    'background': #f47a3c,
+    'background': #2b170d,
     'text-color': #ffffff,
-    'primary': #fdb621,
-    'secondary': #f46c11,
+    'text-primary': #7e7e7e,
+    'primary': #222222,
+    'secondary': #303030,
     'blue': #15d7f5,
-    'purple': #e19ee6,
-    'brown': #cb5719,
+    'purple': #2d202e,
+    'brown': #2d160a,
     'purple-brown': #874954,
     'red': #ff4242,
 );

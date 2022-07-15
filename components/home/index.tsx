@@ -23,13 +23,14 @@ const Home = ({}: Props) => {
                 <div className={Classes['degen-3']} />
                 <div className={Classes['degen-2']} />
                 <div className={Classes['degen-1']} />
-                <div className={Classes['mountain-3']} />
+                <div className={Classes['missedout']} />
+                {/* <div className={Classes['mountain-3']} />
                 <div className={Classes['mountain-2']} />
                 <div className={Classes['mountain-1']} />
                 <div className={Classes['mountains']} />
                 <div className={Classes['explosion-3']} />
                 <div className={Classes['explosion-2']} />
-                <div className={Classes['explosion-1']} />
+                <div className={Classes['explosion-1']} /> */}
                 <div className={Classes.floor} />
                 <div className={Classes.bg} />
             </div>
@@ -50,6 +51,8 @@ const Home = ({}: Props) => {
         `}
                 </Script>
             </div>
+
+            <div className={Classes.content}>₁₀₅₀ ₛₘₒₗ 𝒹ₒₒₘₑᵣₛ ₜᵣᵧₙₐ ₘₐₖₑ ᵢₜ</div>
             <HomeIntro />
             <HomeFeatures />
         </>

@@ -14,7 +14,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     background: theme('background');
-    background-image: url('/images/pixels.svg');
+    // background-image: url('/images/pixels.svg');
     background-repeat: repeat;
     background-size: 1000px;
     color: theme('text-color');
@@ -65,7 +65,7 @@ html {
 // helpers
 .text-primary {
     font-weight: bold;
-    color: theme('primary');
+    color: theme('text-primary');
 }
 
 .text-secondary {

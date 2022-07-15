@@ -45,24 +45,16 @@ const Menu = () => {
     // Buttons array
     const buttons: Buttons[] = [
         {
-            name: 'Home',
+            name: 'home',
             url: '/',
         },
         {
-            name: 'Play',
-            url: '/play',
+            name: 'drop',
+            url: '/drop',
         },
         {
-            name: 'News',
-            url: '/news',
-        },
-        {
-            name: 'Whitepaper',
-            url: 'https://docs.degendystopia.world',
-        },
-        {
-            name: 'Market',
-            url: '/market',
+            name: 'burn',
+            url: '/burn',
         },
     ]
 
