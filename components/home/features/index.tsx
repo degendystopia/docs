@@ -107,6 +107,16 @@ const HomeFeatures = ({}: Props) => {
 
                         <div className={Classes.image}>
                             <img src="/images/dystopian.gif" className={Classes.dao} alt="coins" />
+                            <img
+                                src="/images/dystopian-2.gif"
+                                className={Classes.dao}
+                                alt="coins"
+                            />
+                            <img
+                                src="/images/dystopian-3.gif"
+                                className={Classes.dao}
+                                alt="coins"
+                            />
                         </div>
                     </div>
 
