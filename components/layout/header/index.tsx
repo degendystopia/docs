@@ -22,7 +22,7 @@ const Header = ({}: Props) => {
                         <div className={Classes.image}>
                             <img src="/images/logo.png" alt="Degen Dystopia" />
                         </div>
-                        <h1>smol doomers</h1>
+                        <h1>lil doomers</h1>
                     </div>
 
                     <div className={Classes.socials}>

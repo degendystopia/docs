@@ -93,7 +93,7 @@
         position: relative;
         width: 100%;
         min-width: 50%;
-        min-height: spacing(15);
+        min-height: spacing(20);
         background-color: rgba(0, 0, 0, 0.25);
         border-radius: spacing(1);
 
@@ -125,21 +125,61 @@
     animation: doomers-change 10s ease infinite;
 }
 
-.world {
+.mcdonalds {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/mcdonalds.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.trading {
     display: block;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    height: 80%;
-    width: 80%;
+    // height: 80%;
+    // width: 80%;
     margin: auto;
-    background-image: url('/images/city-scene.png');
+    background-image: url('/images/trading.jpeg');
     background-position: bottom left;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(3);
+}
+
+.boomer1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/boomers/1.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
     z-index: 0;
     border-radius: spacing(1);
 }
@@ -150,4 +190,64 @@
 
 .dao {
     height: 180px;
+}
+
+.burnedsmolr {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/burnedsmolr.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.animejak {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/animejak.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.waitingmint {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/waitingmint.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
 }

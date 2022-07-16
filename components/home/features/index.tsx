@@ -19,32 +19,32 @@ const HomeFeatures = ({}: Props) => {
             <div className={Classes.wrapper}>
                 <div className={Classes.root}>
                     <div className={Classes.section}>
+                        <div className={Classes.content}>
+                            <div>
+                                <h2>
+                                    my portfolio is <span className="text-primary">going down</span>
+                                    .
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div className={Classes.image}>
+                            <div className={Classes.trading} />
+                        </div>
+                    </div>
+
+                    <div className={Classes.section}>
                         <div className={Classes.image}>
                             <div className={Classes.doomers} />
                         </div>
 
                         <div className={Classes.content}>
-                            <ListMenu
-                                font="pixel"
-                                buttons={[
-                                    {
-                                        /*
-                                    my portfolio is down, 
-but i am proud of
- . 
-
-                                    */
-                                        name: 'my portfolio is down',
-                                    },
-                                    {
-                                        name: 'but i am proud of',
-                                    },
-                                    {
-                                        name: 'my nft collection',
-                                        href: 'https://campfire.exchange/collections/0xf2b7638db11427821b03def718d58a0b4c93404c',
-                                    },
-                                ]}
-                            />
+                            <div>
+                                <h2>
+                                    But my <span className="text-primary">nft collection</span> is
+                                    growing every day.
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
@@ -52,44 +52,32 @@ but i am proud of
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    Explore an <span className="text-primary">Open World</span>
+                                    I'm not going to be stuck at this job{' '}
+                                    <span className="text-primary">forever.</span>
                                 </h2>
-                                <p>
-                                    Meet other players, harvest resources, craft equipment, forage
-                                    for collectables, battle in open-world PVP
-                                </p>
-                            </div>
-
-                            <div>
-                                <h2>
-                                    <span className="text-primary">Level-Up</span> your NFTs
-                                </h2>
-                                <p>
-                                    Degens, the playable characters of Degen Dystopia are NFTs that
-                                    can be leveled up by playing the game.
-                                </p>
+                                <p>ᵢ'ₘ 𝓰ₒₙₙₐ ₘₐₖₑ ᵢₜ</p>
                             </div>
                         </div>
 
                         <div className={Classes.image}>
-                            <div className={Classes.world} />
+                            <div className={Classes.mcdonalds} />
                         </div>
                     </div>
 
                     <div className={Classes.section}>
                         <div className={Classes.image}>
-                            <img src="/images/gold.png" className={Classes.coins} alt="coins" />
-                            <img src="/images/scrap.png" className={Classes.coins} alt="coins" />
+                            <div className={Classes.boomer1} />
                         </div>
 
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    <span className="text-primary">Win</span> to Earn
+                                    <span className="text-primary">This time</span> will be
+                                    different.
                                 </h2>
                                 <p>
-                                    Degen Dystopia features a non-inflationary revenue sharing model
-                                    which allows players to comete for yields generated by the game.
+                                    ᴍᴏᴍ ᴀɴᴅ ᴅᴀᴅ ᴀʀᴇ ɢᴏɪɴɢ ʙᴇ sʜᴏᴄᴋᴇᴅ ᴡʜᴇɴ ɪ ᴍᴀᴋᴇ ɪᴛ ʙɪɢ ғʀᴏᴍ
+                                    ᴄʀʏᴘᴛᴏᴄᴜʀʀᴇɴᴄʏ.
                                 </p>
                             </div>
                         </div>
@@ -99,37 +87,39 @@ but i am proud of
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    Crafting <span className="text-primary">DYSTOPIANs</span>
+                                    This one is the real <span className="text-primary">100x</span>
                                 </h2>
-                                <p>Craft NFT minions and command them in battle.</p>
+                                <p>
+                                    ᴡʜᴇɴ ᴛʜᴇ ᴍᴀʀᴋᴇᴛ ʙᴏᴜɴᴄᴇs, ᴍʏ ɴғᴛ ᴄᴏʟʟᴇᴄᴛɪᴏɴ ɪs ɢᴏɪɴɢ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ
+                                    ʀɪᴄʜ.
+                                </p>
                             </div>
                         </div>
 
                         <div className={Classes.image}>
-                            <img src="/images/dystopian.gif" className={Classes.dao} alt="coins" />
-                            <img
-                                src="/images/dystopian-2.gif"
-                                className={Classes.dao}
+                            <div className={Classes.animejak} />
+                            {/* <img
+                                src="/images/burnedsmolr2.png"
+                                // className={Classes.dao}
                                 alt="coins"
-                            />
+                            /> */}
                         </div>
                     </div>
 
                     <div className={Classes.section}>
                         <div className={Classes.image}>
-                            <img src="/images/scroll.png" className={Classes.dao} alt="coins" />
+                            <div className={Classes.waitingmint} />
                         </div>
 
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    Open Governance <span className="text-primary">DAO</span>
+                                    I'm not going to{' '}
+                                    <span className="text-primary"> to miss this mint</span>.
                                 </h2>
                                 <p>
-                                    Degen Dystopia is designed to be governed via DAO mechanics.
-                                    Unlike other games, the players will choose the way the game
-                                    evolves, both from within the game, as well as by the ability to
-                                    propose and vote on changes to Degen Dystopia itself.
+                                    ɪ'ᴍ ᴊᴜsᴛ ɢᴏɴɴᴀ sɪᴛ ʜᴇʀᴇ ʀᴇғʀᴇsʜɪɴɢ ᴛʜᴇ ᴘᴀɢᴇ ᴜɴᴛɪʟ ᴛʜᴇ ᴍɪɴᴛ ᴅᴀᴛᴇ
+                                    ɪs ᴀɴɴᴏᴜɴᴄᴇᴅ.
                                 </p>
                             </div>
                         </div>

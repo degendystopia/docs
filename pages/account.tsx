@@ -6,12 +6,9 @@ const AccountPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Account | Degen Dystopia</title>
-                <meta property="og:title" content="Account | Degen Dystopia" />
-                <meta
-                    property="og:url"
-                    content="https://degendystopia.world/account"
-                />
+                <title>account | lil doomers</title>
+                <meta property="og:title" content="account | lil doomers" />
+                <meta property="og:url" content="https://doomers.wtf/account" />
             </Head>
             <Account />
         </>

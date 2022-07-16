@@ -49,8 +49,8 @@ const Menu = () => {
             url: '/',
         },
         {
-            name: 'drop',
-            url: '/drop',
+            name: 'mint',
+            url: '/mint',
         },
         {
             name: 'burn',

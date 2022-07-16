@@ -6,8 +6,8 @@ const HomePage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>smol doomers</title>
-                <meta property="og:title" content="smol doomers  " />
+                <title>lil doomers</title>
+                <meta property="og:title" content="lil doomers" />
                 <meta property="og:url" content="https://doomers.wtf" />
             </Head>
             <Home />
