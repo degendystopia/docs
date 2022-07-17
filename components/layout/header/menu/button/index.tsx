@@ -26,17 +26,6 @@ const MenuButton = (props: Props) => {
         isActive = true
     }
 
-    if (props.url == '/play') {
-        return (
-            <a
-                href={props.url}
-                className={Clsx(Classes.root, isActive && Classes.active)}
-            >
-                <span className={Classes.name}>{props.name}</span>
-            </a>
-        )
-    }
-
     return (
         <Link href={props.url}>
             <a className={Clsx(Classes.root, isActive && Classes.active)}>

@@ -35,7 +35,7 @@ const GameComponent = () => {
         // directly. That is why we need to define our own async function and call it below.
         const init = async () => {
             // Import DD
-            await import('degen-dystopia')
+            // await import('degen-dystopia')
         }
 
         // Call our async function

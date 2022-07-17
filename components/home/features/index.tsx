@@ -22,14 +22,53 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    my portfolio is <span className="text-primary">going down</span>
-                                    .
+                                    I was up all night{' '}
+                                    <span className="text-primary">watching the charts</span> again.
                                 </h2>
+                                <p>ɪ sᴛᴀʀᴛᴇᴅ ʙᴜʏɪɴɢ ᴄʀʏᴘᴛᴏ ɪɴ 2021.</p>
                             </div>
                         </div>
 
                         <div className={Classes.image}>
-                            <div className={Classes.trading} />
+                            <div className={Classes.ragethoughts} />
+                            <div className={Classes.binance} />
+                            <div className={Classes.hoodiejak} />
+                        </div>
+                    </div>
+
+                    <div className={Classes.section}>
+                        <div className={Classes.image}>
+                            <div className={Classes.mcdonalds} />
+                        </div>
+                        <div className={Classes.content}>
+                            <div>
+                                <h2>
+                                    We were supposed to
+                                    <span className="text-primary"> make it</span>.
+                                </h2>
+                                <p>ɴᴏᴡ ɪ ɴᴇᴇᴅ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀʟʟ ʙᴀᴄᴋ.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={Classes.section}>
+                        <div className={Classes.content}>
+                            <div>
+                                <h2>
+                                    Lucky for me, I found a{' '}
+                                    <span className="text-primary">sure thing</span>.
+                                </h2>
+                                <p>(ɴғᴀ)</p>
+                            </div>
+                        </div>
+
+                        <div className={Classes.image}>
+                            <div className={Classes.animejak} />
+                            {/* <img
+                                src="/images/burneddownbadr2.png"
+                                // className={Classes.dao}
+                                alt="coins"
+                            /> */}
                         </div>
                     </div>
 
@@ -41,9 +80,12 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    But my <span className="text-primary">nft collection</span> is
-                                    growing every day.
+                                    ...an <span className="text-primary">nft collection</span>.
                                 </h2>
+                                <p>
+                                    ɪ ʜᴀᴠᴇ ɴᴇᴠᴇʀ sᴇᴇɴ ᴀʀᴛᴡᴏʀᴋ ᴛʜɪs ɢᴏᴏᴅ ʙᴇғᴏʀᴇ ɪɴ ᴍʏ ʟɪғᴇ. ᴀɴᴅ ɪ
+                                    ʀᴇᴀᴅ ᴛʜᴀᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴇᴀᴍ ᴀʀᴇ ᴡᴏʀᴋɪɴɢ ᴏɴ ᴀ ᴍᴇᴛᴀᴠᴇʀsᴇ.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -52,57 +94,14 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    I'm not going to be stuck at this job{' '}
-                                    <span className="text-primary">forever.</span>
+                                    it is definitely not a{' '}
+                                    <span className="text-primary">rug pull</span>.
                                 </h2>
-                                <p>ᵢ'ₘ 𝓰ₒₙₙₐ ₘₐₖₑ ᵢₜ</p>
+                                <p>ɪ ᴄᴀɴ'ᴛ ᴡᴀɪᴛ ᴛᴏ ᴘʀᴏᴠᴇ ᴍᴏᴍ ᴀɴᴅ ᴅᴀᴅ ᴡʀᴏɴɢ.</p>
                             </div>
                         </div>
-
-                        <div className={Classes.image}>
-                            <div className={Classes.mcdonalds} />
-                        </div>
-                    </div>
-
-                    <div className={Classes.section}>
                         <div className={Classes.image}>
                             <div className={Classes.boomer1} />
-                        </div>
-
-                        <div className={Classes.content}>
-                            <div>
-                                <h2>
-                                    <span className="text-primary">This time</span> will be
-                                    different.
-                                </h2>
-                                <p>
-                                    ᴍᴏᴍ ᴀɴᴅ ᴅᴀᴅ ᴀʀᴇ ɢᴏɪɴɢ ʙᴇ sʜᴏᴄᴋᴇᴅ ᴡʜᴇɴ ɪ ᴍᴀᴋᴇ ɪᴛ ʙɪɢ ғʀᴏᴍ
-                                    ᴄʀʏᴘᴛᴏᴄᴜʀʀᴇɴᴄʏ.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={Classes.section}>
-                        <div className={Classes.content}>
-                            <div>
-                                <h2>
-                                    This one is the real <span className="text-primary">100x</span>
-                                </h2>
-                                <p>
-                                    ᴡʜᴇɴ ᴛʜᴇ ᴍᴀʀᴋᴇᴛ ʙᴏᴜɴᴄᴇs, ᴍʏ ɴғᴛ ᴄᴏʟʟᴇᴄᴛɪᴏɴ ɪs ɢᴏɪɴɢ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ
-                                    ʀɪᴄʜ.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={Classes.image}>
-                            <div className={Classes.animejak} />
-                            {/* <img
-                                src="/images/burnedsmolr2.png"
-                                // className={Classes.dao}
-                                alt="coins"
-                            /> */}
                         </div>
                     </div>
 
@@ -118,8 +117,8 @@ const HomeFeatures = ({}: Props) => {
                                     <span className="text-primary"> to miss this mint</span>.
                                 </h2>
                                 <p>
-                                    ɪ'ᴍ ᴊᴜsᴛ ɢᴏɴɴᴀ sɪᴛ ʜᴇʀᴇ ʀᴇғʀᴇsʜɪɴɢ ᴛʜᴇ ᴘᴀɢᴇ ᴜɴᴛɪʟ ᴛʜᴇ ᴍɪɴᴛ ᴅᴀᴛᴇ
-                                    ɪs ᴀɴɴᴏᴜɴᴄᴇᴅ.
+                                    ʏᴏᴜ ᴡᴏᴜʟᴅ ʜᴀᴠᴇ ᴛᴏ ʟɪᴛᴇʀᴀʟʟʏ ᴛᴇᴀʀ ᴍʏ ʙᴏᴅʏ ғʀᴏᴍ ᴛʜɪs ᴄᴏᴍᴘᴜᴛᴇʀ ᴛᴏ
+                                    sᴛᴏᴘ ᴍᴇ ғʀᴏᴍ ɢᴇᴛᴛɪɴɢ ɪɴᴛᴏ ᴛʜɪs ᴡʜɪᴛᴇʟɪsᴛ. LFGGGGG
                                 </p>
                             </div>
                         </div>

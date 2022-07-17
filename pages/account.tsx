@@ -6,8 +6,8 @@ const AccountPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>account | lil doomers</title>
-                <meta property="og:title" content="account | lil doomers" />
+                <title>account | downbad doomers</title>
+                <meta property="og:title" content="account | downbad doomers" />
                 <meta property="og:url" content="https://doomers.wtf/account" />
             </Head>
             <Account />

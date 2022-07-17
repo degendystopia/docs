@@ -49,6 +49,10 @@ const Menu = () => {
             url: '/',
         },
         {
+            name: 'whitelist',
+            url: '/whitelist',
+        },
+        {
             name: 'mint',
             url: '/mint',
         },

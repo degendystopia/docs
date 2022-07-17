@@ -32,7 +32,7 @@ const Account = () => {
 
     const dummyData: dummyData[] = [
         {
-            name: 'Shono Pol',
+            name: 'downbad doomer #303',
             image: '/images/degens/1.png',
             type: 'rare',
             stats: [
@@ -147,7 +147,7 @@ const Account = () => {
                         </div>
                     </div>
 
-                    <div className={Classes.center}>Your DEGENs:</div>
+                    <div className={Classes.center}>Your Doomers:</div>
 
                     <div className={Classes.listings}>
                         {dummyData.map((item, index) => {

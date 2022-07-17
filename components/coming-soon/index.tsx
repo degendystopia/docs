@@ -10,7 +10,7 @@ const ComingSoon = () => {
         <div className={Classes.container}>
             <Container>
                 <div className={Classes.root}>
-                    <Title variant="dark" name="Coming Soon" align="center" />
+                    <Title variant="light" name="Coming Soon" align="center" />
                 </div>
             </Container>
         </div>

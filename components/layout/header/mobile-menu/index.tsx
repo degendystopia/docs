@@ -21,30 +21,26 @@ const MobileMenu = () => {
     // Buttons array
     const buttons: Buttons[] = [
         {
-            name: 'Home',
+            name: 'home',
             url: '/',
         },
         {
-            name: 'Play',
-            url: '/play',
+            name: 'whitelist',
+            url: '/whitelist',
         },
         {
-            name: 'News',
-            url: '/news',
+            name: 'mint',
+            url: '/mint',
         },
         {
-            name: 'Whitepaper',
-            url: 'https://docs.degendystopia.world',
-        },
-        {
-            name: 'Market',
-            url: '/market',
+            name: 'burn',
+            url: '/burn',
         },
     ]
 
     return (
         <div className={Classes.root}>
-            <h1 className="h6">Degen Dystopia</h1>
+            <h1 className="h6">downbad doomers</h1>
 
             <div className={Classes.toggle}>
                 <Button

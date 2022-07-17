@@ -20,17 +20,17 @@ const Header = ({}: Props) => {
                 <div className={Classes.container}>
                     <div className={Classes.logo}>
                         <div className={Classes.image}>
-                            <img src="/images/logo.png" alt="Degen Dystopia" />
+                            <img src="/images/logo.png" alt="downbad doomers" />
                         </div>
-                        <h1>lil doomers</h1>
+                        <h1>downbad doomers</h1>
                     </div>
 
                     <div className={Classes.socials}>
-                        <a className={Classes.button} href="https://discord.gg/pQc9xwczW7">
+                        <a className={Classes.button} href="https://discord.gg/bSuPkbUzxt">
                             <img src="/images/discord.png" alt="discord" />
                         </a>
 
-                        <a className={Classes.button} href="https://twitter.com/smoldoomers">
+                        <a className={Classes.button} href="https://twitter.com/downbaddoomers">
                             <img src="/images/twitter.png" alt="twitter" />
                         </a>
                     </div>

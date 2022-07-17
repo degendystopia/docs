@@ -50,7 +50,7 @@
     background-position: bottom;
     left: 0;
     right: 0;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
 }
@@ -171,7 +171,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 5%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
 }
@@ -185,7 +185,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 15%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
     display: none;
@@ -204,7 +204,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 25%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
     display: none;
@@ -223,7 +223,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 25%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -243,7 +243,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 15%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -263,7 +263,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 5%;
-    bottom: spacing(0);
+    bottom: spacing(4);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -282,4 +282,84 @@
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
+}
+
+.parallax-1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/parallax/1.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    // background-attachment: fixed;
+    background-size: 35%;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.parallax-2 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/parallax/2.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    // background-attachment: fixed;
+    background-size: 35%;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.parallax-3 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/parallax/3.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    // background-attachment: fixed;
+    background-size: 35%;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.parallax-4 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/parallax/4.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    // background-attachment: fixed;
+    background-size: 35%;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
 }
