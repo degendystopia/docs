@@ -20,9 +20,9 @@ const Header = ({}: Props) => {
                 <div className={Classes.container}>
                     <div className={Classes.logo}>
                         <div className={Classes.image}>
-                            <img src="/images/logo.png" alt="downbad doomers" />
+                            <img src="/images/logo.png" alt="down bad doomers" />
                         </div>
-                        <h1>downbad doomers</h1>
+                        <h1>down bad doomers</h1>
                     </div>
 
                     <div className={Classes.socials}>
@@ -30,7 +30,7 @@ const Header = ({}: Props) => {
                             <img src="/images/discord.png" alt="discord" />
                         </a>
 
-                        <a className={Classes.button} href="https://twitter.com/downbaddoomers">
+                        <a className={Classes.button} href="https://twitter.com/smoldoomers">
                             <img src="/images/twitter.png" alt="twitter" />
                         </a>
                     </div>

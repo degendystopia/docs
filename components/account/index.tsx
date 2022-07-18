@@ -32,7 +32,7 @@ const Account = () => {
 
     const dummyData: dummyData[] = [
         {
-            name: 'downbad doomer #303',
+            name: 'down bad doomer #303',
             image: '/images/degens/1.png',
             type: 'rare',
             stats: [

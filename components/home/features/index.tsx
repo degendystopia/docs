@@ -64,6 +64,8 @@ const HomeFeatures = ({}: Props) => {
 
                         <div className={Classes.image}>
                             <div className={Classes.animejak} />
+                            <div className={Classes.hiddendegen} />
+
                             {/* <img
                                 src="/images/burneddownbadr2.png"
                                 // className={Classes.dao}
@@ -118,7 +120,7 @@ const HomeFeatures = ({}: Props) => {
                                 </h2>
                                 <p>
                                     ʏᴏᴜ ᴡᴏᴜʟᴅ ʜᴀᴠᴇ ᴛᴏ ʟɪᴛᴇʀᴀʟʟʏ ᴛᴇᴀʀ ᴍʏ ʙᴏᴅʏ ғʀᴏᴍ ᴛʜɪs ᴄᴏᴍᴘᴜᴛᴇʀ ᴛᴏ
-                                    sᴛᴏᴘ ᴍᴇ ғʀᴏᴍ ɢᴇᴛᴛɪɴɢ ɪɴᴛᴏ ᴛʜɪs ᴡʜɪᴛᴇʟɪsᴛ. LFGGGGG
+                                    sᴛᴏᴘ ᴍᴇ ғʀᴏᴍ ɢᴇᴛᴛɪɴɢ ɪɴᴛᴏ ᴛʜɪs ᴡʜɪᴛᴇʟɪsᴛ REEEEEEEEEEEEEEEEEEEEE
                                 </p>
                             </div>
                         </div>

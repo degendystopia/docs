@@ -29,7 +29,6 @@ const Home = ({}: Props) => {
                 <div className={Classes['parallax-3']} />
                 <div className={Classes['parallax-2']} />
                 <div className={Classes['parallax-1']} />
-                <div className={Classes.content}>₁₀₅₀ ₛₘₒₗ 𝒹ₒₒₘₑᵣₛ ₜᵣᵧₙₐ ₘₐₖₑ ᵢₜ</div>
                 {/* <div className={Classes['mountain-3']} />
                 <div className={Classes['mountain-2']} />
                 <div className={Classes['mountain-1']} />
@@ -38,6 +37,7 @@ const Home = ({}: Props) => {
                 <div className={Classes['explosion-2']} />
                 <div className={Classes['explosion-1']} /> */}
                 <div className={Classes.floor} />
+                <div className={Classes.content}>₁₀₅₀ 𝒹ₒₒₘₑᵣₛ ₛₜᵢₗₗ ₜᵣᵧₙₐ ₘₐₖₑ ᵢₜ</div>
                 {/* <div className={Classes.bg} /> */}
             </div>
 

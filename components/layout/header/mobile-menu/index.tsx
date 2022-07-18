@@ -40,7 +40,7 @@ const MobileMenu = () => {
 
     return (
         <div className={Classes.root}>
-            <h1 className="h6">downbad doomers</h1>
+            <h1 className="h6">down bad doomers</h1>
 
             <div className={Classes.toggle}>
                 <Button
