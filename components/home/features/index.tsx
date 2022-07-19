@@ -99,7 +99,7 @@ const HomeFeatures = ({}: Props) => {
                                     it is definitely not a{' '}
                                     <span className="text-primary">rug pull</span>.
                                 </h2>
-                                <p>ɪ ᴄᴀɴ'ᴛ ᴡᴀɪᴛ ᴛᴏ ᴘʀᴏᴠᴇ ᴍᴏᴍ ᴀɴᴅ ᴅᴀᴅ ᴡʀᴏɴɢ.</p>
+                                <p>ɪ ᴄᴀɴ&apos;ᴛ ᴡᴀɪᴛ ᴛᴏ ᴘʀᴏᴠᴇ ᴍᴏᴍ ᴀɴᴅ ᴅᴀᴅ ᴡʀᴏɴɢ.</p>
                             </div>
                         </div>
                         <div className={Classes.image}>
@@ -115,7 +115,7 @@ const HomeFeatures = ({}: Props) => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    I'm not going to{' '}
+                                    I&apos;m not going to{' '}
                                     <span className="text-primary"> to miss this mint</span>.
                                 </h2>
                                 <p>

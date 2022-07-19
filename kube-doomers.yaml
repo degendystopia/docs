@@ -1,0 +1,107 @@
+#  rbac
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+    namespace: doomers
+    name: configmap-updater
+rules:
+    - apiGroups: ['']
+      #
+      # at the HTTP level, the name of the resource for accessing ConfigMap
+      # objects is "configmaps"
+      resources: ['configmaps']
+      verbs: ['update', 'get', 'list', 'create']
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This role binding allows "jane" to read pods in the "default" namespace.
+# You need to already have a Role named "pod-reader" in that namespace.
+kind: RoleBinding
+metadata:
+    name: configmap-updater
+    namespace: doomers
+subjects:
+    # You can specify more than one "subject"
+    - kind: ServiceAccount
+      name: default
+      namespace: doomers
+roleRef:
+    # "roleRef" specifies the binding to a Role / ClusterRole
+    kind: Role #this must be Role or ClusterRole
+    apiGroup: rbac.authorization.k8s.io
+    name: configmap-updater # this must match the name of the Role or ClusterRole you wish to bind to
+---
+# -- deploy
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: doomers-server-v1
+    namespace: doomers
+spec:
+    selector:
+        matchLabels:
+            app: doomers-server
+            version: v1
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: doomers-server
+                version: v1
+        spec:
+            containers:
+                - name: game
+                  image: registry.digitalocean.com/dd-game-server/doomer-server:0.1.0
+                  ports:
+                      - containerPort: 3000
+                  imagePullPolicy: Always
+                  # env:
+                  #   - name: PRIVATE_KEY
+                  #     valueFrom:
+                  #       secretKeyRef:
+                  #         name: pkey
+                  #         key: pkey
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: doomers-server
+    namespace: doomers
+    labels:
+        app: doomers-server
+spec:
+    ports:
+        - port: 3000
+          protocol: TCP
+    selector:
+        app: doomers-server
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: doomers-ingress
+    namespace: doomers
+    annotations:
+        kubernetes.io/ingress.class: nginx
+spec:
+    rules:
+        - host: '*.doomers.wtf'
+          http:
+              paths:
+                  - pathType: Prefix
+                    path: '/'
+                    backend:
+                        service:
+                            name: doomers-server
+                            port:
+                                number: 3000
+        - host: 'doomers.wtf'
+          http:
+              paths:
+                  - pathType: Prefix
+                    path: '/'
+                    backend:
+                        service:
+                            name: doomers-server
+                            port:
+                                number: 3000

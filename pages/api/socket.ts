@@ -1,5 +1,5 @@
-import { WhitelistData, WhitelistStorage } from 'pages/server/whitelist'
-import { Server } from 'Socket.IO'
+import { WhitelistData, WhitelistStorage } from 'pages/api/whitelist'
+import { Server } from 'socket.io'
 
 const whitelistStorage = new WhitelistStorage()
 

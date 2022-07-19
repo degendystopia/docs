@@ -3,9 +3,10 @@ import Container from '@/components/container'
 import Title from '../title'
 import Button from '../button'
 import { useEffect } from 'react'
-import io from 'Socket.IO-client'
+
 import { ethers } from 'ethers'
-let socket
+import { Socket, io } from 'socket.io-client'
+let socket: Socket
 
 /**
  * WhitelistForm component
@@ -92,9 +93,10 @@ const WhitelistForm = () => {
                         <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    looks like it's <span className="text-primary">open</span> .
+                                    looks like it&apos;s <span className="text-primary">open</span>{' '}
+                                    .
                                 </h2>
-                                <p>ɪᴛ's ᴘʀᴏʙᴀʙʟʏ ᴛᴏᴏ ʟᴀᴛᴇ.</p>
+                                <p>ₚₗₑₐₛₑ 𝒹ₒₙ&apos;ₜ ₗₑₜ ᵢₜ ᵦₑ ₜₒₒ ₗₐₜₑ</p>
                             </div>
                         </div>
                         <div className={Classes.image}>

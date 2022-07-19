@@ -26,7 +26,7 @@ const Header = ({}: Props) => {
                     </div>
 
                     <div className={Classes.socials}>
-                        <a className={Classes.button} href="https://discord.gg/bSuPkbUzxt">
+                        <a className={Classes.button} href="https://discord.gg/3tP9MBgmpX">
                             <img src="/images/discord.png" alt="discord" />
                         </a>
 
