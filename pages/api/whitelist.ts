@@ -12,11 +12,16 @@ export interface WhitelistData {
     discord: string
     telegram: string
     other: string
+    timestamp: number
+    waitlist: boolean
+    ip: string
 }
 
 export class WhitelistStorage {
     configmapName = 'whitelist'
     configmapNamespace = 'doomers'
+
+    cachedConfigMap: V1ConfigMap | undefined
 
     async getCurrentWhitelist(): Promise<Map<string, WhitelistData>> {
         const configmap = await this.getConfigMap()
@@ -35,24 +40,25 @@ export class WhitelistStorage {
         return whitelist
     }
 
+    // whitelist have no
     async insertToWhitelist(data: WhitelistData) {
         // validate data
         if (!data.address || !ethers.utils.isAddress(data.address)) {
             return 'Invalid address'
         }
-        // validate social contact
-        if (!data.twitter && !data.discord && !data.telegram && !data.other) {
-            return 'No social contact provided'
-        }
         const whitelist = await this.getCurrentWhitelist()
         if (whitelist.has(data.address)) {
-            return 'Address already whitelisted'
+            return // no up
         }
+        data.timestamp = Date.now()
         whitelist.set(data.address, data)
         await this.updateConfigMap(whitelist)
     }
 
     private async getConfigMap(): Promise<V1ConfigMap | undefined> {
+        if (this.cachedConfigMap) {
+            return this.cachedConfigMap
+        }
         const resp = await k8sApi.readNamespacedConfigMap(
             this.configmapName,
             this.configmapNamespace,
@@ -61,6 +67,7 @@ export class WhitelistStorage {
             console.log('Error reading kube configmap: ' + resp.response.statusCode)
             return
         }
+        this.cachedConfigMap = resp.body
         return resp.body
     }
 
@@ -83,9 +90,11 @@ export class WhitelistStorage {
             configmap,
         )
         if (!resp || resp.response.statusCode >= 300) {
+            this.cachedConfigMap = undefined // clear cache on an error
             console.log('Error updating kube configmap: ' + resp.response.statusCode)
             return
         }
+        this.cachedConfigMap = resp.body
         console.log('Configmap updated')
     }
 }

@@ -20,11 +20,24 @@
     bottom: 0;
     left: 0;
     right: 0;
-    // background-color: rgba($color: #fff, $alpha: 1);
-    // mask-image: url('/images/pixels.svg');
+    background-color: rgba($color: #fff, $alpha: 1);
+    mask-image: url('/images/pixels.svg');
     mask-repeat: repeat;
     mask-size: 200px;
     z-index: 0;
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: spacing(8);
+    height: spacing(15);
+    background-color: theme('brown');
+    border-top: spacing(1) solid theme('background');
+    border-bottom: spacing(1) solid theme('primary');
+    z-index: 1;
 }
 
 .floor {

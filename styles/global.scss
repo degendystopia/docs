@@ -68,6 +68,12 @@ html {
     color: theme('text-primary');
 }
 
+// helpers
+.title-primary {
+    font-weight: bold;
+    color: theme('title-primary');
+}
+
 .text-secondary {
     font-weight: bold;
     color: theme('secondary');

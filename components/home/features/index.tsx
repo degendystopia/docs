@@ -109,15 +109,19 @@ const HomeFeatures = ({}: Props) => {
 
                     <div className={Classes.section}>
                         <div className={Classes.image}>
-                            <div className={Classes.waitingmint} />
+                            <a href="/whitelist">
+                                <div className={Classes.waitingmint} />
+                            </a>
                         </div>
 
                         <div className={Classes.content}>
                             <div>
-                                <h2>
-                                    I&apos;m not going to{' '}
-                                    <span className="text-primary"> to miss this mint</span>.
-                                </h2>
+                                <a href="/whitelist">
+                                    <h2>
+                                        I&apos;m not going to{' '}
+                                        <span className="text-primary"> miss this mint</span>.
+                                    </h2>
+                                </a>
                                 <p>
                                     ʏᴏᴜ ᴡᴏᴜʟᴅ ʜᴀᴠᴇ ᴛᴏ ʟɪᴛᴇʀᴀʟʟʏ ᴛᴇᴀʀ ᴍʏ ʙᴏᴅʏ ғʀᴏᴍ ᴛʜɪs ᴄᴏᴍᴘᴜᴛᴇʀ ᴛᴏ
                                     sᴛᴏᴘ ᴍᴇ ғʀᴏᴍ ɢᴇᴛᴛɪɴɢ ɪɴᴛᴏ ᴛʜɪs ᴡʜɪᴛᴇʟɪsᴛ REEEEEEEEEEEEEEEEEEEEE

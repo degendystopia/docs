@@ -8,9 +8,9 @@ const MintPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Mint | down bad doomers</title>
-                <meta property="og:title" content="Mint | downbad doomers" />
-                <meta property="og:url" content="https://doomers.wtf/mint" />
+                <title>Whitelist | down bad doomers</title>
+                <meta property="og:title" content="Whitelist | downbad doomers" />
+                <meta property="og:url" content="https://doomers.wtf/whitelist" />
             </Head>
             <div>
                 {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
