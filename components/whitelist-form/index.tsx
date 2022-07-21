@@ -162,13 +162,37 @@ function OhShitWhatHappenedToTheForm(props) {
                             </div>
                         </div>
                         <div className={Classes.image}>
-                            <div className={Classes.supermaniac} />
+                            <div className={Classes.suicide} />
                         </div>
                     </div>
                     <Title variant="light" name="𝓌ₕₐₜ ₜₕₑ ₕₑₗₗ ᵢₛ ₜₕᵢₛ?" align="center" />
                     <div className={Classes.section}>
-                        <div className="phaser-game"></div>
+                        <div className={Classes.content}>
+                            <iframe
+                                src="https://gateway.ipfscdn.io/ipfs/QmZ3UzARChNBBVdqcbibQ63nvtePkRfnyieb89sXTRMLxE/edition-drop.html?contract=0x79858dB84396cCcE5FFD870a68226Fe6854DfC17&chainId=1&tokenId=0"
+                                width="600px"
+                                height="600px"
+                            ></iframe>
+                        </div>
+
+                        <div>
+                            <div className={Classes.image}>
+                                <div className={Classes.wlticket} />
+                            </div>
+                            <h2>
+                                looks like now you need to{' '}
+                                <span className="text-primary">mint a whitelist pass</span>.
+                            </h2>
+                            <p>
+                                ʟᴜᴄᴋʏ ᴍᴇ, ᴛʜᴇ ᴘᴀssᴇs ᴀʀᴇɴ&apos;ᴛ ᴍɪɴᴛᴇᴅ ᴏᴜᴛ ʏᴇᴛ. Lᴏᴏᴋs ʟɪᴋᴇ
+                                ᴛʜᴇʏ&apos;ʀᴇ ғʀᴇᴇ (ᴏᴛʜᴇʀ ᴛʜᴀɴ ɢᴀs).{' '}
+                            </p>
+                        </div>
                     </div>
+
+                    {/* <div className={Classes.section}>
+                        <div className="phaser-game"></div>
+                    </div> */}
                 </div>
             </div>
         </Container>
