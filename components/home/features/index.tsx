@@ -2,6 +2,7 @@ import Classes from './src/home-features.module.scss'
 import Container from '@/components/container'
 import Title from '@/components/title'
 import ListMenu from '@/components/list-menu'
+import Link from 'next/link'
 
 /**
  * Interfaces
@@ -109,19 +110,19 @@ const HomeFeatures = ({}: Props) => {
 
                     <div className={Classes.section}>
                         <div className={Classes.image}>
-                            <a href="/whitelist">
+                            <Link href="/whitelist">
                                 <div className={Classes.waitingmint} />
-                            </a>
+                            </Link>
                         </div>
 
                         <div className={Classes.content}>
                             <div>
-                                <a href="/whitelist">
+                                <Link href="/whitelist">
                                     <h2>
                                         I&apos;m not going to{' '}
                                         <span className="text-primary"> miss this mint</span>.
                                     </h2>
-                                </a>
+                                </Link>
                                 <p>
                                     ʏᴏᴜ ᴡᴏᴜʟᴅ ʜᴀᴠᴇ ᴛᴏ ʟɪᴛᴇʀᴀʟʟʏ ᴛᴇᴀʀ ᴍʏ ʙᴏᴅʏ ғʀᴏᴍ ᴛʜɪs ᴄᴏᴍᴘᴜᴛᴇʀ ᴛᴏ
                                     sᴛᴏᴘ ᴍᴇ ғʀᴏᴍ ɢᴇᴛᴛɪɴɢ ɪɴᴛᴏ ᴛʜɪs ᴡʜɪᴛᴇʟɪsᴛ REEEEEEEEEEEEEEEEEEEEE

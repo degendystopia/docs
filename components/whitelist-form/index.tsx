@@ -6,8 +6,9 @@ import React, { FormEventHandler, useEffect } from 'react'
 
 import { ethers } from 'ethers'
 import { Socket, io } from 'socket.io-client'
-import { WhitelistData } from 'pages/api/whitelist'
+import { WhitelistData } from 'pages/api/whitelistStorage'
 import { useFloating } from '@floating-ui/react-dom'
+import useInterval from 'utils/interval'
 
 /**
  * WhitelistForm component
@@ -34,7 +35,7 @@ const WhitelistForm = () => {
     // set up form state
     const [formState, setFormState] = React.useState({
         submitted: false,
-        timesClicked: 0,
+        clicked: false,
     })
 
     const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -68,37 +69,32 @@ const WhitelistForm = () => {
             return
         }
 
-        switch (formState.timesClicked) {
-            case 0:
-                setInfoText('come on...', 0xffffff)
-                break
-            case 1:
-                setInfoText('submitting...', 0xffffff)
-                break
-            case 2:
-                setInfoText('really submitting this time. promise.', 0xffffff)
-                break
-            default:
-                setInfoText('you broke it.', 0xffffff)
-                break
-        }
+        setInfoText('come on 🤞 ...', 0xffffff)
 
         if (!formState.submitted) {
+            setFormState({
+                submitted: false,
+                clicked: true,
+            })
             conn.socket.emit('waitlist', data, (err: string) => {
                 if (err) {
                     setInfoText(err, 0xff0000)
                 } else {
-                    setFormState({
-                        submitted: true,
-                        timesClicked: formState.timesClicked + 1,
-                    })
                     setInfoText('hmm. maybe that worked?', 0xffffff)
+                    setTimeout(() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+                        setFormState({
+                            submitted: true,
+                            clicked: true,
+                        })
+                    }, 3000)
                 }
             })
         } else {
+            setInfoText('best we can do now is wait.', 0xffffff)
             setFormState({
                 submitted: true,
-                timesClicked: formState.timesClicked + 1,
+                clicked: true,
             })
         }
 
@@ -117,18 +113,25 @@ const WhitelistForm = () => {
         // reset form
         // form.reset()
     }
+    useEffect(() => {
+        if (formState.submitted) {
+            // 👇️ scroll to top on page load
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+        }
+    }, [])
 
     return (
         <Container>
             <div className={Classes.wrapper}>
                 <div className={Classes.root}>
-                    {formState.timesClicked > 3 ? (
-                        <OhShitWhatHappenedToTheForm />
-                    ) : (
+                    {!formState.submitted ? (
                         <IHopeTheWhiteListIsOpen
+                            conn={conn}
+                            clicked={formState.clicked}
                             submitForm={submitForm}
-                            timesClicked={formState.timesClicked}
                         />
+                    ) : (
+                        <OhShitWhatHappenedToTheForm />
                     )}
                 </div>
             </div>
@@ -138,19 +141,54 @@ const WhitelistForm = () => {
 
 export default WhitelistForm
 
-function OhShitWhatHappenedToTheForm(props) {
+function WhitelistCount(props) {
+    const socket = props.conn.socket as Socket
+    const [count, setCount] = React.useState(0)
+
+    useEffect(() => {
+        if (socket) {
+            socket.emit('whitelisted-count', (count: number) => {
+                setCount(count)
+            })
+        }
+    })
+    useInterval(() => {
+        socket.emit('whitelisted-count', (count: number) => {
+            setCount(count)
+        })
+    }, 2000)
     return (
         <Container>
-            <div className={Classes.underconstruction} />
+            {/* <div className={Classes.section}></div>
+             */}
+            <div className={Classes.section}>
+                <div className={Classes.content}>
+                    <div>
+                        <h2>
+                            only <span className="text-primary">{count}/200</span> whitelist spots
+                            claimed.
+                        </h2>
+                        <p>ₜₕₑᵣₑ&apos;ₛ ₛₜᵢₗₗ ₕₒₚₑ</p>
+                    </div>
+                </div>
+                <div className={Classes.image}>
+                    <div className={Classes.soycomputer} />
+                </div>
+            </div>
+        </Container>
+    )
+}
+
+function OhShitWhatHappenedToTheForm() {
+    return (
+        <Container>
+            {/* <div className={Classes.underconstruction} /> */}
             <div className={Classes.wrapper}>
                 <div className={Classes.root}>
                     {/* <div className={Classes.section}></div>
                      */}
 
-                    <div className={Classes.section}></div>
-                    <div className={Classes.section}></div>
-                    <div className={Classes.section}></div>
-                    <div className={Classes.section}></div>
+                    <Title variant="light-shake" name="𝓌ₕₐₜ ₜₕₑ ₕₑₗₗ ᵢₛ ₜₕᵢₛ?" align="center" />
                     <div className={Classes.section}>
                         <div className={Classes.content}>
                             <div>
@@ -165,28 +203,22 @@ function OhShitWhatHappenedToTheForm(props) {
                             <div className={Classes.suicide} />
                         </div>
                     </div>
-                    <Title variant="light" name="𝓌ₕₐₜ ₜₕₑ ₕₑₗₗ ᵢₛ ₜₕᵢₛ?" align="center" />
+                    <Title
+                        variant="light"
+                        extraClass="light-text"
+                        name="ₒₕ 𝓌ₐᵢₜ... ᵢₜ 𝓌ₒᵣₖₑ𝒹?"
+                        align="center"
+                    />
                     <div className={Classes.section}>
-                        <div className={Classes.content}>
-                            <iframe
-                                src="https://gateway.ipfscdn.io/ipfs/QmZ3UzARChNBBVdqcbibQ63nvtePkRfnyieb89sXTRMLxE/edition-drop.html?contract=0x79858dB84396cCcE5FFD870a68226Fe6854DfC17&chainId=1&tokenId=0"
-                                width="600px"
-                                height="600px"
-                            ></iframe>
+                        <div className={Classes.image}>
+                            <div className={Classes.wlticket} />
                         </div>
-
-                        <div>
-                            <div className={Classes.image}>
-                                <div className={Classes.wlticket} />
-                            </div>
+                        <div className={Classes.content}>
                             <h2>
-                                looks like now you need to{' '}
-                                <span className="text-primary">mint a whitelist pass</span>.
+                                i guess i&apos;ve got a{' '}
+                                <span className="text-primary">whitelist pass</span>.
                             </h2>
-                            <p>
-                                ʟᴜᴄᴋʏ ᴍᴇ, ᴛʜᴇ ᴘᴀssᴇs ᴀʀᴇɴ&apos;ᴛ ᴍɪɴᴛᴇᴅ ᴏᴜᴛ ʏᴇᴛ. Lᴏᴏᴋs ʟɪᴋᴇ
-                                ᴛʜᴇʏ&apos;ʀᴇ ғʀᴇᴇ (ᴏᴛʜᴇʀ ᴛʜᴀɴ ɢᴀs).{' '}
-                            </p>
+                            <p>ɴᴏᴡ ᴀʟʟ ɪ ɴᴇᴇᴅ ᴛᴏ ᴅᴏ ɪs ɴᴏᴛ ᴍɪss ᴛʜᴇ ᴍɪɴᴛ.</p>
                         </div>
                     </div>
 
@@ -207,9 +239,6 @@ function IHopeTheWhiteListIsOpen(props) {
         <Container>
             <Title variant="light" name="I hope the whitelist is still open." align="center" />
             <div className={Classes.section}>
-                <div className={Classes.image}>
-                    <div className={Classes.work1} />
-                </div>
                 <div className={Classes.content}>
                     <div>
                         <h2>
@@ -218,9 +247,15 @@ function IHopeTheWhiteListIsOpen(props) {
                         <p>ᴍɪɢʜᴛ ʜᴀᴠᴇ ᴍɪssᴇᴅ ɪᴛ.</p>
                     </div>
                 </div>
+                <div className={Classes.image}>
+                    <div className={Classes.work1} />
+                </div>
             </div>
 
             <div className={Classes.section}>
+                <div className={Classes.image}>
+                    <div className={Classes.maniacwojak} />
+                </div>
                 <div className={Classes.content}>
                     <div>
                         <h2>
@@ -229,10 +264,9 @@ function IHopeTheWhiteListIsOpen(props) {
                         <p>ₚₗₑₐₛₑ 𝒹ₒₙ&apos;ₜ ₗₑₜ ᵢₜ ᵦₑ ₜₒₒ ₗₐₜₑ</p>
                     </div>
                 </div>
-                <div className={Classes.image}>
-                    <div className={Classes.maniacwojak} />
-                </div>
             </div>
+
+            <WhitelistCount conn={props.conn} />
 
             <div className={Classes.section}>
                 <div className={Classes.image}>
@@ -254,17 +288,18 @@ function IHopeTheWhiteListIsOpen(props) {
                                 <input className="text-secondary" type="text" name="note" />
                             </div>
                         </div>
-                        {props.timesClicked > 0 ? (
+                        {props.clicked ? (
                             <div
                                 ref={floating}
                                 style={{
                                     position: strategy,
-                                    left: (x ?? 0) - Math.random() * 140 * props.timesClicked,
-                                    top: (y ?? 0) - Math.random() * 100 * props.timesClicked,
+                                    // left: (x ?? 0) - Math.random() * 240 * 2,
+                                    // top: (y ?? 0) - Math.random() * 200 * 2,
                                 }}
                             >
                                 <Button
                                     name="submit"
+                                    effect="rotate"
                                     variant="light"
                                     type="submit"
                                     icon={<img src="/images/heart.png" alt="heart" />}

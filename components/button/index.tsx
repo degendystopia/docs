@@ -11,6 +11,7 @@ interface Props {
     icon?: ReactElement
     onClick?(): any
     variant?: 'light' | 'dark'
+    effect?: string
     type?: 'submit'
     href?: string
     scroll?: boolean
@@ -24,7 +25,11 @@ const Button = (props: Props) => {
         return (
             <Link href={props.href} scroll={props.scroll}>
                 <a
-                    className={Clsx(Classes.root, props.variant && Classes[props.variant])}
+                    className={Clsx(
+                        Classes.root,
+                        props.variant && Classes[props.variant],
+                        props.effect && Classes[props.effect],
+                    )}
                     onClick={props.onClick}
                 >
                     <span className={Classes.icon}>{props.icon}</span>
@@ -37,7 +42,11 @@ const Button = (props: Props) => {
     return (
         <button
             type={props.type}
-            className={Clsx(Classes.root, props.variant && Classes[props.variant])}
+            className={Clsx(
+                Classes.root,
+                props.variant && Classes[props.variant],
+                props.effect && Classes[props.effect],
+            )}
             onClick={props.onClick}
         >
             <span className={Classes.icon}>{props.icon}</span>

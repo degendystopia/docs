@@ -1,0 +1,575 @@
+@use 'variables' as *;
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes doomers-change {
+    5% {
+        background-image: url('/images/doomers/1.webp');
+    }
+    10% {
+        background-image: url('/images/doomers/2.webp');
+    }
+    15% {
+        background-image: url('/images/doomers/3.webp');
+    }
+    20% {
+        background-image: url('/images/doomers/4.webp');
+    }
+    25% {
+        background-image: url('/images/doomers/5.webp');
+    }
+    30% {
+        background-image: url('/images/doomers/6.webp');
+    }
+    35% {
+        background-image: url('/images/doomers/7.webp');
+    }
+    40% {
+        background-image: url('/images/doomers/8.webp');
+    }
+    45% {
+        background-image: url('/images/doomers/9.webp');
+    }
+    50% {
+        background-image: url('/images/doomers/10.webp');
+    }
+    55% {
+        background-image: url('/images/doomers/11.webp');
+    }
+    60% {
+        background-image: url('/images/doomers/12.webp');
+    }
+    65% {
+        background-image: url('/images/doomers/13.webp');
+    }
+    70% {
+        background-image: url('/images/doomers/14.webp');
+    }
+    75% {
+        background-image: url('/images/doomers/15.webp');
+    }
+    80% {
+        background-image: url('/images/doomers/16.webp');
+    }
+    85% {
+        background-image: url('/images/doomers/17.webp');
+    }
+    90% {
+        background-image: url('/images/doomers/18.webp');
+    }
+    95% {
+        background-image: url('/images/doomers/19.webp');
+    }
+    100% {
+        background-image: url('/images/doomers/20.webp');
+    }
+}
+
+.wrapper {
+    padding: spacing(2);
+    border-radius: spacing(2);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: spacing(3.5);
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-width: 50%;
+    min-height: spacing(10);
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: spacing(1);
+
+    @media #{$mq-small} {
+        width: auto;
+    }
+}
+
+.section {
+    display: flex;
+    gap: spacing(2);
+    flex-direction: column;
+
+    @media #{$mq-small} {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        min-width: 50%;
+        min-height: spacing(20);
+        background-color: rgba(0, 0, 0, 0.25);
+        border-radius: spacing(1);
+
+        @media #{$mq-small} {
+            width: auto;
+        }
+    }
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        justify-content: center;
+    }
+}
+
+.doomers {
+    display: block;
+    height: spacing(15);
+    width: spacing(15);
+    margin: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+    border-radius: 25px;
+
+    animation: doomers-change 10s ease infinite;
+}
+
+.work1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/work1.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.mcdonalds {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/mcdonalds.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.trading {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/trading.jpeg');
+    background-position: bottom left;
+    // background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    z-index: 0;
+    border-radius: spacing(3);
+}
+
+.roughmarket {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/roughmarket.png');
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: top left;
+    z-index: 3;
+    border-radius: spacing(3);
+}
+
+.ragethoughts {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/ragethoughts.png');
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    // background-size: 40%;
+    background-position: top right;
+    z-index: 3;
+    border-radius: spacing(3);
+}
+
+.pepegrin {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/pepegrin.png');
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position: bottom right;
+    z-index: 3;
+    border-radius: spacing(3);
+}
+
+.maniacwojak {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/maniacwojak.png');
+    // background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    z-index: 3;
+    border-radius: spacing(3);
+}
+
+.binance {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    // height: 80%;
+    // width: 80%;
+    margin: auto;
+    background-image: url('/images/binance.png');
+    background-position: bottom left;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 20%;
+    z-index: 0;
+    border-radius: spacing(3);
+}
+
+.hoodiejak {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/hoodiejak.png');
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: contain;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.mcdonalds {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/mcdonalds.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+.boomer1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/boomers/1.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.coins {
+    height: 180px;
+}
+
+.dao {
+    height: 180px;
+}
+
+.burneddownbadr {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/burneddownbadr.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.animejak {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/animejak.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.waitingmint {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/waitingmint.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.underconstruction {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    margin-top: 0px;
+    background-image: url('/images/underconstruction.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.supermaniac {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/supermaniac.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.suicide {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/suicide.jpg');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.wlticket {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/wlticket.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: contain;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+.inputText {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // bottom: spacing(1);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-image: url('/images/waitingmint.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-size: 100%;
+    z-index: 0;
+    border-radius: spacing(1);
+}
+
+button.shake {
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-2deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(3deg);
+    }
+    30% {
+        transform: translate(0px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(2px, 1px) rotate(-2deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(4deg);
+    }
+    90% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

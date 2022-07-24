@@ -3,6 +3,8 @@ import HomeIntro from './intro'
 import HomeFeatures from './features'
 import Script from 'next/script'
 import Title from '../title'
+import Link from 'next/link'
+import MintCountdown from '../mint-countdown'
 
 /**
  * Interfaces
@@ -40,7 +42,6 @@ const Home = ({}: Props) => {
                     <div className={Classes['parallax-2']} />
                     <div className={Classes['parallax-1']} />
                     <div className={Classes.floor} />
-                    {/* <div className={Classes.content}>₁₀₅₀ 𝒹ₒₒₘₑᵣₛ ₛₜᵢₗₗ ₜᵣᵧₙₐ ₘₐₖₑ ᵢₜ</div> */}
                     <div className={Classes.bg} />
                 </div>
             </div>
@@ -62,6 +63,7 @@ const Home = ({}: Props) => {
                 </Script>
             </div>
 
+            <MintCountdown date="July 25, 2022 20:00:00" />
             <HomeIntro />
             <HomeFeatures />
         </>

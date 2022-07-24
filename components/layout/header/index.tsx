@@ -33,6 +33,13 @@ const Header = ({}: Props) => {
                         <a className={Classes.button} href="https://twitter.com/smoldoomers">
                             <img src="/images/twitter.png" alt="twitter" />
                         </a>
+
+                        <a
+                            className={Classes.button}
+                            href="https://raritysniper.com/nft-drops-calendar"
+                        >
+                            <img src="/images/raritysniper.png" alt="raritysniper" />
+                        </a>
                     </div>
                 </div>
             </Container>
