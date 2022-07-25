@@ -59,6 +59,7 @@ export declare namespace Seller {
 
 export interface DownBadDoomersInterface extends utils.Interface {
   functions: {
+    "_royaltyAmount()": FunctionFragment;
     "_usedWhitelistHashes(bytes32)": FunctionFragment;
     "_whitelistSigners(address)": FunctionFragment;
     "addWhitelistSigner(address)": FunctionFragment;
@@ -71,7 +72,6 @@ export interface DownBadDoomersInterface extends utils.Interface {
     "getEthSignedMessageHash(bytes32)": FunctionFragment;
     "getHashToSign(address,uint16)": FunctionFragment;
     "getSigner(bytes32,bytes)": FunctionFragment;
-    "getTokensOfOwner(address)": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "mintPublic(address,uint256)": FunctionFragment;
     "mintWhitelist(uint16,bytes)": FunctionFragment;
@@ -107,6 +107,7 @@ export interface DownBadDoomersInterface extends utils.Interface {
 
   getFunction(
     nameOrSignatureOrTopic:
+      | "_royaltyAmount"
       | "_usedWhitelistHashes"
       | "_whitelistSigners"
       | "addWhitelistSigner"
@@ -119,7 +120,6 @@ export interface DownBadDoomersInterface extends utils.Interface {
       | "getEthSignedMessageHash"
       | "getHashToSign"
       | "getSigner"
-      | "getTokensOfOwner"
       | "isApprovedForAll"
       | "mintPublic"
       | "mintWhitelist"
@@ -153,6 +153,10 @@ export interface DownBadDoomersInterface extends utils.Interface {
       | "unpause"
   ): FunctionFragment;
 
+  encodeFunctionData(
+    functionFragment: "_royaltyAmount",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "_usedWhitelistHashes",
     values: [BytesLike]
@@ -197,10 +201,6 @@ export interface DownBadDoomersInterface extends utils.Interface {
   encodeFunctionData(
     functionFragment: "getSigner",
     values: [BytesLike, BytesLike]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "getTokensOfOwner",
-    values: [string]
   ): string;
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
@@ -304,6 +304,10 @@ export interface DownBadDoomersInterface extends utils.Interface {
   encodeFunctionData(functionFragment: "unpause", values?: undefined): string;
 
   decodeFunctionResult(
+    functionFragment: "_royaltyAmount",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "_usedWhitelistHashes",
     data: BytesLike
   ): Result;
@@ -339,10 +343,6 @@ export interface DownBadDoomersInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "getSigner", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "getTokensOfOwner",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
     data: BytesLike
@@ -578,6 +578,8 @@ export interface DownBadDoomers extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
+    _royaltyAmount(overrides?: CallOverrides): Promise<[BigNumber]>;
+
     _usedWhitelistHashes(
       arg0: BytesLike,
       overrides?: CallOverrides
@@ -632,11 +634,6 @@ export interface DownBadDoomers extends BaseContract {
       signature_: BytesLike,
       overrides?: CallOverrides
     ): Promise<[string, string, string]>;
-
-    getTokensOfOwner(
-      addr: string,
-      overrides?: CallOverrides
-    ): Promise<[BigNumber[]]>;
 
     isApprovedForAll(
       owner: string,
@@ -694,7 +691,9 @@ export interface DownBadDoomers extends BaseContract {
       _tokenId: BigNumberish,
       _salePrice: BigNumberish,
       overrides?: CallOverrides
-    ): Promise<[string, BigNumber]>;
+    ): Promise<
+      [string, BigNumber] & { receiver: string; royaltyAmount: BigNumber }
+    >;
 
     "safeTransferFrom(address,address,uint256)"(
       from: string,
@@ -797,6 +796,8 @@ export interface DownBadDoomers extends BaseContract {
     ): Promise<ContractTransaction>;
   };
 
+  _royaltyAmount(overrides?: CallOverrides): Promise<BigNumber>;
+
   _usedWhitelistHashes(
     arg0: BytesLike,
     overrides?: CallOverrides
@@ -848,11 +849,6 @@ export interface DownBadDoomers extends BaseContract {
     signature_: BytesLike,
     overrides?: CallOverrides
   ): Promise<[string, string, string]>;
-
-  getTokensOfOwner(
-    addr: string,
-    overrides?: CallOverrides
-  ): Promise<BigNumber[]>;
 
   isApprovedForAll(
     owner: string,
@@ -907,7 +903,9 @@ export interface DownBadDoomers extends BaseContract {
     _tokenId: BigNumberish,
     _salePrice: BigNumberish,
     overrides?: CallOverrides
-  ): Promise<[string, BigNumber]>;
+  ): Promise<
+    [string, BigNumber] & { receiver: string; royaltyAmount: BigNumber }
+  >;
 
   "safeTransferFrom(address,address,uint256)"(
     from: string,
@@ -999,6 +997,8 @@ export interface DownBadDoomers extends BaseContract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    _royaltyAmount(overrides?: CallOverrides): Promise<BigNumber>;
+
     _usedWhitelistHashes(
       arg0: BytesLike,
       overrides?: CallOverrides
@@ -1054,11 +1054,6 @@ export interface DownBadDoomers extends BaseContract {
       overrides?: CallOverrides
     ): Promise<[string, string, string]>;
 
-    getTokensOfOwner(
-      addr: string,
-      overrides?: CallOverrides
-    ): Promise<BigNumber[]>;
-
     isApprovedForAll(
       owner: string,
       operator: string,
@@ -1108,7 +1103,9 @@ export interface DownBadDoomers extends BaseContract {
       _tokenId: BigNumberish,
       _salePrice: BigNumberish,
       overrides?: CallOverrides
-    ): Promise<[string, BigNumber]>;
+    ): Promise<
+      [string, BigNumber] & { receiver: string; royaltyAmount: BigNumber }
+    >;
 
     "safeTransferFrom(address,address,uint256)"(
       from: string,
@@ -1284,6 +1281,8 @@ export interface DownBadDoomers extends BaseContract {
   };
 
   estimateGas: {
+    _royaltyAmount(overrides?: CallOverrides): Promise<BigNumber>;
+
     _usedWhitelistHashes(
       arg0: BytesLike,
       overrides?: CallOverrides
@@ -1336,11 +1335,6 @@ export interface DownBadDoomers extends BaseContract {
     getSigner(
       hash_: BytesLike,
       signature_: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    getTokensOfOwner(
-      addr: string,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
@@ -1484,6 +1478,8 @@ export interface DownBadDoomers extends BaseContract {
   };
 
   populateTransaction: {
+    _royaltyAmount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     _usedWhitelistHashes(
       arg0: BytesLike,
       overrides?: CallOverrides
@@ -1539,11 +1535,6 @@ export interface DownBadDoomers extends BaseContract {
     getSigner(
       hash_: BytesLike,
       signature_: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    getTokensOfOwner(
-      addr: string,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
