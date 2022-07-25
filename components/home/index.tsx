@@ -5,6 +5,7 @@ import Script from 'next/script'
 import Title from '../title'
 import Link from 'next/link'
 import MintCountdown from '../mint-countdown'
+import MintForm from '../mint-form'
 
 /**
  * Interfaces
@@ -63,7 +64,7 @@ const Home = ({}: Props) => {
                 </Script>
             </div>
 
-            <MintCountdown date="July 25, 2022 20:00:00" />
+            <MintCountdown date="July 25, 2022 20:00:00" children={<MintForm />} />
             <HomeIntro />
             <HomeFeatures />
         </>

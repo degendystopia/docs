@@ -1,0 +1,702 @@
+[
+    {
+        "name": "Your Collection #1",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/1.png",
+        "dna": "ed8599ddef5082e54b245edeea35e307af07fc68",
+        "edition": 1,
+        "date": 1658703658169,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "plant"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "sol"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #2",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/2.png",
+        "dna": "bffebf062a41811cada16ffc0b56d46a33022742",
+        "edition": 2,
+        "date": 1658703658195,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "salmon"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "twitter"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "avax"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #3",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/3.png",
+        "dna": "92d1a7cf353bd281a54e03263ddcab086a3ded05",
+        "edition": 3,
+        "date": 1658703658219,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "plant"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #4",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/4.png",
+        "dna": "5f0f8612a3cb3c6a3f245389563da80a8c4505e5",
+        "edition": 4,
+        "date": 1658703658242,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "lemon"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "xrp"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #5",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/5.png",
+        "dna": "4c9ac0b7e71f912a7db5387e05b10482a15d75a2",
+        "edition": 5,
+        "date": 1658703658264,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "cerulean"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "avax"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #6",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/6.png",
+        "dna": "f574d7e0ad386b31d7a4f4149986213d4f26dc65",
+        "edition": 6,
+        "date": 1658703658285,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "cerulean"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "twitter"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "eth"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #7",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/7.png",
+        "dna": "5523bc1fddc398cbbf1e6c608b1f900104498af5",
+        "edition": 7,
+        "date": 1658703658307,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "lemon"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bearish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "avax"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #8",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/8.png",
+        "dna": "b23b505981561fb10c7cc0aa8a07f2d6607bc666",
+        "edition": 8,
+        "date": 1658703658328,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "salmon"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bearish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #9",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/9.png",
+        "dna": "baf08be8a84170f11b832f938dd4633471038e38",
+        "edition": 9,
+        "date": 1658703658349,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "plant"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "xrp"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #10",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/10.png",
+        "dna": "12bee9ac492784ec12358b1695782836f296d013",
+        "edition": 10,
+        "date": 1658703658373,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "fire"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "twitter"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #11",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/11.png",
+        "dna": "50d701c984345b30c95828eac2d9939686d44c04",
+        "edition": 11,
+        "date": 1658703658395,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "naranja"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "sol"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #12",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/12.png",
+        "dna": "c3e16337a3ca1a2d79340cbbe9179917c2ff559d",
+        "edition": 12,
+        "date": 1658703658416,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "naranja"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bearish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "eth"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #13",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/13.png",
+        "dna": "401d740ebe28923048f6090166a581ce1f307c98",
+        "edition": 13,
+        "date": 1658703658439,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "naranja"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #14",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/14.png",
+        "dna": "59ec7fb2e2a16327f890b55672b78d8568196ed8",
+        "edition": 14,
+        "date": 1658703658462,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "plant"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "sol"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #15",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/15.png",
+        "dna": "2017485110f71bfd00c75364e7261b27e25f625d",
+        "edition": 15,
+        "date": 1658703658484,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "noir"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "sol"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #16",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/16.png",
+        "dna": "2fedbace51cd9cdf1fb625a0728125d4cfd3c2b2",
+        "edition": 16,
+        "date": 1658703658506,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "naranja"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "eth"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #17",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/17.png",
+        "dna": "aa3c417abcc3211c521596934195f91f671ada9b",
+        "edition": 17,
+        "date": 1658703658527,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "lemon"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "gf"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #18",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/18.png",
+        "dna": "5185930a1bf4e41c211d46aab254d72878f1811d",
+        "edition": 18,
+        "date": 1658703658549,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "plant"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bearish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #19",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/19.png",
+        "dna": "e2080bd6d78caf982935ab45448ca3a196d3955e",
+        "edition": 19,
+        "date": 1658703658571,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "wagmi"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "btc"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    },
+    {
+        "name": "Your Collection #20",
+        "description": "Remember to replace this description",
+        "image": "http://localhost:3000/images/downbads/20.png",
+        "dna": "df0e524dee396d55a18134918e67d6004baa3f7d",
+        "edition": 20,
+        "date": 1658703658592,
+        "attributes": [
+            {
+                "trait_type": "backgrounds",
+                "value": "naranja"
+            },
+            {
+                "trait_type": "base",
+                "value": "head"
+            },
+            {
+                "trait_type": "face",
+                "value": "depressed"
+            },
+            {
+                "trait_type": "screen",
+                "value": "bullish"
+            },
+            {
+                "trait_type": "beanie",
+                "value": "xrp"
+            },
+            {
+                "trait_type": "accessories",
+                "value": "mug"
+            }
+        ],
+        "compiler": "HashLips Art Engine"
+    }
+]

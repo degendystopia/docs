@@ -6,7 +6,65 @@ import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 import DegensTokenABI from '@/tokens/degens'
 import Modal from '../modal'
+import Contracts from '../../utils/contracts'
 
+import { getDefaultProvider } from 'ethers'
+import { NftProvider, useNft } from 'use-nft'
+
+// Alternatively, you can use the "ethereum" fetcher. Note
+// that we are using window.ethereum here (injected by wallets
+// like MetaMask), but any standard Ethereum provider would work.
+// const fetcher = ["ethereum", { ethereum }]
+
+// Wrap your app with <NftProvider />.
+function Account3() {
+    const contract = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512'
+    const tokenIds = ['0x1', '0x2', '0x3']
+
+    // local states
+    const [address, setAddress] = useState<string>('')
+    const [modal, setModal] = useState<object>({})
+
+    // We are using the "ethers" fetcher here.
+    const ethersConfig = {
+        provider: new ethers.providers.Web3Provider((window as any).ethereum, 'any'),
+    }
+
+    var rows = []
+    for (var i = 0; i < tokenIds.length; i++) {
+        const tokenId = tokenIds[i]
+        rows.push(<Nft key={tokenId} contract={contract} tokenId={tokenId} />)
+    }
+    return <NftProvider fetcher={['ethers', ethersConfig]}>{rows}</NftProvider>
+}
+{
+    /* 
+function NftGrid({contractAddr, tokenIds, numrows}) {
+} */
+}
+
+// useNft() is now ready to be used in your app. Pass
+// the NFT contract and token ID to fetch the metadata.
+function Nft({ contract, tokenId }) {
+    const { loading, error, nft } = useNft(contract, tokenId)
+
+    // nft.loading is true during load.
+    if (loading) return <>Loading…</>
+
+    // nft.error is an Error instance in case of error.
+    if (error || !nft) return <>Error.</>
+
+    // You can now display the NFT metadata.
+    return (
+        <section>
+            <h1>{nft.name}</h1>
+            <img src={nft.image} alt="" />
+            <p>{nft.description}</p>
+            <p>Owner: {nft.owner}</p>
+            <p>Metadata URL: {nft.metadataUrl}</p>
+        </section>
+    )
+}
 // Skip typechecking on the window object
 declare let window: any
 
@@ -77,12 +135,13 @@ const Account = () => {
             setAddress(userAddress)
         }
 
-        // Initialize degens contract
-        const DegensContract = new ethers.Contract(
-            '0x2a014dFF1e035B0B622689bCc599b60E34AACf11',
-            DegensTokenABI,
-            signer,
-        )
+        // initialize contract
+        const contracts = new Contracts(signer)
+
+        // get owend tokens
+        const userTokens = await contracts.doomers.contract.getTokensOfOwner(userAddress)
+
+        console.log(userTokens)
 
         // if address is not null (if user is logged in)
         // if (address) {
@@ -129,7 +188,7 @@ const Account = () => {
     return (
         <Container>
             <div className={Classes.root}>
-                <Title variant="dark" name="Account | Preview" align="center" />
+                <Title variant="light" name="Account | Preview" align="center" />
 
                 <div className={Classes.container}>
                     <div className={Classes.user}>

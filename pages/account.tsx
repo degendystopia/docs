@@ -10,7 +10,7 @@ const AccountPage: NextPage = () => {
                 <meta property="og:title" content="account | down bad doomers" />
                 <meta property="og:url" content="https://doomers.wtf/account" />
             </Head>
-            <Account />
+            {/* <Account /> */}
         </>
     )
 }

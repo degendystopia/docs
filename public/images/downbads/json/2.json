@@ -1,0 +1,35 @@
+{
+    "name": "Your Collection #2",
+    "description": "Remember to replace this description",
+    "image": "http://localhost:3000/images/downbads/2.png",
+    "dna": "bffebf062a41811cada16ffc0b56d46a33022742",
+    "edition": 2,
+    "date": 1658703658195,
+    "attributes": [
+        {
+            "trait_type": "backgrounds",
+            "value": "salmon"
+        },
+        {
+            "trait_type": "base",
+            "value": "head"
+        },
+        {
+            "trait_type": "face",
+            "value": "depressed"
+        },
+        {
+            "trait_type": "screen",
+            "value": "twitter"
+        },
+        {
+            "trait_type": "beanie",
+            "value": "avax"
+        },
+        {
+            "trait_type": "accessories",
+            "value": "mug"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}

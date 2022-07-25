@@ -50,6 +50,9 @@ export class WhitelistStorage {
         if (whitelist.has(data.address)) {
             return // no up
         }
+        if (whitelist.size >= 200) {
+            return 'Whitelist is full'
+        }
         data.timestamp = Date.now()
         whitelist.set(data.address, data)
         await this.updateConfigMap(whitelist)

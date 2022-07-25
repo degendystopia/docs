@@ -1,0 +1,35 @@
+{
+    "name": "Your Collection #12",
+    "description": "Remember to replace this description",
+    "image": "http://localhost:3000/images/downbads/12.png",
+    "dna": "c3e16337a3ca1a2d79340cbbe9179917c2ff559d",
+    "edition": 12,
+    "date": 1658703658416,
+    "attributes": [
+        {
+            "trait_type": "backgrounds",
+            "value": "naranja"
+        },
+        {
+            "trait_type": "base",
+            "value": "head"
+        },
+        {
+            "trait_type": "face",
+            "value": "depressed"
+        },
+        {
+            "trait_type": "screen",
+            "value": "bearish"
+        },
+        {
+            "trait_type": "beanie",
+            "value": "eth"
+        },
+        {
+            "trait_type": "accessories",
+            "value": "mug"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}

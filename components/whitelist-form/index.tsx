@@ -168,7 +168,7 @@ function WhitelistCount(props) {
                             only <span className="text-primary">{count}/200</span> whitelist spots
                             claimed.
                         </h2>
-                        <p>ₜₕₑᵣₑ&apos;ₛ ₛₜᵢₗₗ ₕₒₚₑ</p>
+                        <p>ₗₑₜ&apos;ₛ 𝒻ᵤ𝒸ₖᵢₙ𝓰 𝓰ₒ</p>
                     </div>
                 </div>
                 <div className={Classes.image}>
@@ -237,83 +237,97 @@ function IHopeTheWhiteListIsOpen(props) {
     // You can use Hooks here!
     return (
         <Container>
-            <Title variant="light" name="I hope the whitelist is still open." align="center" />
-            <div className={Classes.section}>
-                <div className={Classes.content}>
-                    <div>
-                        <h2>
-                            <span className="text-primary"> had to stay late</span> at work.
-                        </h2>
-                        <p>ᴍɪɢʜᴛ ʜᴀᴠᴇ ᴍɪssᴇᴅ ɪᴛ.</p>
-                    </div>
-                </div>
-                <div className={Classes.image}>
-                    <div className={Classes.work1} />
-                </div>
-            </div>
-
-            <div className={Classes.section}>
-                <div className={Classes.image}>
-                    <div className={Classes.maniacwojak} />
-                </div>
-                <div className={Classes.content}>
-                    <div>
-                        <h2>
-                            i hope it&apos;s <span className="text-primary">open</span>.
-                        </h2>
-                        <p>ₚₗₑₐₛₑ 𝒹ₒₙ&apos;ₜ ₗₑₜ ᵢₜ ᵦₑ ₜₒₒ ₗₐₜₑ</p>
-                    </div>
-                </div>
-            </div>
-
-            <WhitelistCount conn={props.conn} />
-
-            <div className={Classes.section}>
-                <div className={Classes.image}>
-                    <div className={Classes.trading} />
-                </div>
-                <div className={Classes.content}>
-                    <form id="whitelist-form" onSubmit={props.submitForm} ref={reference}>
-                        <div className={Classes.form}>
+            <div className={Classes.wrapper}>
+                <div className={Classes.root}>
+                    <Title
+                        variant="light"
+                        name="I hope the whitelist is still open."
+                        align="center"
+                    />
+                    <div className={Classes.section}>
+                        <div className={Classes.content}>
                             <div>
                                 <h2>
-                                    ETH Wallet Address
-                                    <span className="text-primary">(required)</span>:
+                                    <span className="text-primary"> had to stay late</span> at work.
                                 </h2>
-                                <input className="text-secondary" type="text" name="address" />
-                            </div>
-                            <div>
-                                <p id="info-text">+ anything u want to add, contact info, etc:</p>
-                                <h2>Note:</h2>
-                                <input className="text-secondary" type="text" name="note" />
+                                <p>ᴍɪɢʜᴛ ʜᴀᴠᴇ ᴍɪssᴇᴅ ɪᴛ.</p>
                             </div>
                         </div>
-                        {props.clicked ? (
-                            <div
-                                ref={floating}
-                                style={{
-                                    position: strategy,
-                                    // left: (x ?? 0) - Math.random() * 240 * 2,
-                                    // top: (y ?? 0) - Math.random() * 200 * 2,
-                                }}
-                            >
-                                <Button
-                                    name="submit"
-                                    effect="rotate"
-                                    variant="light"
-                                    type="submit"
-                                    icon={<img src="/images/heart.png" alt="heart" />}
-                                />
+                        <div className={Classes.image}>
+                            <div className={Classes.work1} />
+                        </div>
+                    </div>
+
+                    <div className={Classes.section}>
+                        <div className={Classes.image}>
+                            <div className={Classes.maniacwojak} />
+                        </div>
+                        <div className={Classes.content}>
+                            <div>
+                                <h2>
+                                    i hope it&apos;s <span className="text-primary">open</span>.
+                                </h2>
+                                <p>ₚₗₑₐₛₑ 𝒹ₒₙ&apos;ₜ ₗₑₜ ᵢₜ ᵦₑ ₜₒₒ ₗₐₜₑ</p>
                             </div>
-                        ) : (
-                            <Button
-                                name="submit"
-                                variant="light"
-                                type="submit"
-                                icon={<img src="/images/heart.png" alt="heart" />}
-                            />
-                        )}
-                    </form>
+                        </div>
+                    </div>
+
+                    <WhitelistCount conn={props.conn} />
+
+                    <div className={Classes.section}>
+                        <div className={Classes.image}>
+                            <div className={Classes.trading} />
+                        </div>
+                        <div className={Classes.content}>
+                            <form id="whitelist-form" onSubmit={props.submitForm} ref={reference}>
+                                <div className={Classes.form}>
+                                    <div>
+                                        <h2>
+                                            ETH Wallet Address
+                                            <span className="text-primary">(required)</span>:
+                                        </h2>
+                                        <input
+                                            className="text-secondary"
+                                            type="text"
+                                            name="address"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p id="info-text">
+                                            + anything u want to add, contact info, etc:
+                                        </p>
+                                        <h2>Note:</h2>
+                                        <input className="text-secondary" type="text" name="note" />
+                                    </div>
+                                </div>
+                                {props.clicked ? (
+                                    <div
+                                        ref={floating}
+                                        style={{
+                                            position: strategy,
+                                            // left: (x ?? 0) - Math.random() * 240 * 2,
+                                            // top: (y ?? 0) - Math.random() * 200 * 2,
+                                        }}
+                                    >
+                                        <Button
+                                            name="submit"
+                                            effect="rotate"
+                                            variant="light"
+                                            type="submit"
+                                            icon={<img src="/images/heart.png" alt="heart" />}
+                                        />
+                                    </div>
+                                ) : (
+                                    <Button
+                                        name="submit"
+                                        variant="light"
+                                        type="submit"
+                                        icon={<img src="/images/heart.png" alt="heart" />}
+                                    />
+                                )}
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Container>

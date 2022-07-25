@@ -35,6 +35,11 @@ const addWhitelistHandler = (socket: Socket) => {
         const currentWl = await whitelistStorage.getCurrentWhitelist()
         callback(currentWl.size)
     })
+
+    socket.on('redeem-whitelist', async (callback) => {
+        const currentWl = await whitelistStorage.getCurrentWhitelist()
+        callback(currentWl.size)
+    })
 }
 
 export default addWhitelistHandler

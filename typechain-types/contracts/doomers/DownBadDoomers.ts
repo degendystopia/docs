@@ -71,6 +71,7 @@ export interface DownBadDoomersInterface extends utils.Interface {
     "getEthSignedMessageHash(bytes32)": FunctionFragment;
     "getHashToSign(address,uint16)": FunctionFragment;
     "getSigner(bytes32,bytes)": FunctionFragment;
+    "getTokensOfOwner(address)": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "mintPublic(address,uint256)": FunctionFragment;
     "mintWhitelist(uint16,bytes)": FunctionFragment;
@@ -118,6 +119,7 @@ export interface DownBadDoomersInterface extends utils.Interface {
       | "getEthSignedMessageHash"
       | "getHashToSign"
       | "getSigner"
+      | "getTokensOfOwner"
       | "isApprovedForAll"
       | "mintPublic"
       | "mintWhitelist"
@@ -195,6 +197,10 @@ export interface DownBadDoomersInterface extends utils.Interface {
   encodeFunctionData(
     functionFragment: "getSigner",
     values: [BytesLike, BytesLike]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getTokensOfOwner",
+    values: [string]
   ): string;
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
@@ -333,6 +339,10 @@ export interface DownBadDoomersInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "getSigner", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "getTokensOfOwner",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
     data: BytesLike
@@ -623,6 +633,11 @@ export interface DownBadDoomers extends BaseContract {
       overrides?: CallOverrides
     ): Promise<[string, string, string]>;
 
+    getTokensOfOwner(
+      addr: string,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber[]]>;
+
     isApprovedForAll(
       owner: string,
       operator: string,
@@ -834,6 +849,11 @@ export interface DownBadDoomers extends BaseContract {
     overrides?: CallOverrides
   ): Promise<[string, string, string]>;
 
+  getTokensOfOwner(
+    addr: string,
+    overrides?: CallOverrides
+  ): Promise<BigNumber[]>;
+
   isApprovedForAll(
     owner: string,
     operator: string,
@@ -1033,6 +1053,11 @@ export interface DownBadDoomers extends BaseContract {
       signature_: BytesLike,
       overrides?: CallOverrides
     ): Promise<[string, string, string]>;
+
+    getTokensOfOwner(
+      addr: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber[]>;
 
     isApprovedForAll(
       owner: string,
@@ -1314,6 +1339,11 @@ export interface DownBadDoomers extends BaseContract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
+    getTokensOfOwner(
+      addr: string,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
     isApprovedForAll(
       owner: string,
       operator: string,
@@ -1509,6 +1539,11 @@ export interface DownBadDoomers extends BaseContract {
     getSigner(
       hash_: BytesLike,
       signature_: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    getTokensOfOwner(
+      addr: string,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 

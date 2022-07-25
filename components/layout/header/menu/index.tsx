@@ -4,6 +4,7 @@ import Button from '@/components/button'
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Select from 'react-dropdown-select'
 
 /**
  * Interfaces
@@ -19,7 +20,7 @@ declare let window: any
 /**
  * Menu component
  */
-const Menu = () => {
+const Menu = (props) => {
     // local states
     const [auth, setAuth] = useState<boolean>(false)
 
@@ -66,6 +67,10 @@ const Menu = () => {
         <div className={Classes.root}>
             <NavBar buttons={buttons} />
 
+            {/* TODO chain select <div className={Classes.wallet}>
+                <ChainSelect setChain={props.setChain} />
+            </div> */}
+
             <div className={Classes.wallet}>
                 {auth ? (
                     <Link href="/account">
@@ -91,3 +96,14 @@ const Menu = () => {
 }
 
 export default Menu
+export const ChainSelect = ({ setChain }) => (
+    <div className={Classes.chainSelect}>
+        <Select
+            options={['ETH', 'SOL']}
+            values={['ETH']}
+            onChange={setChain}
+            placeholder="Select Chain"
+            className={Classes.chainSelect}
+        />
+    </div>
+)

@@ -1,0 +1,35 @@
+{
+    "name": "Your Collection #4",
+    "description": "Remember to replace this description",
+    "image": "http://localhost:3000/images/downbads/4.png",
+    "dna": "5f0f8612a3cb3c6a3f245389563da80a8c4505e5",
+    "edition": 4,
+    "date": 1658703658242,
+    "attributes": [
+        {
+            "trait_type": "backgrounds",
+            "value": "lemon"
+        },
+        {
+            "trait_type": "base",
+            "value": "head"
+        },
+        {
+            "trait_type": "face",
+            "value": "depressed"
+        },
+        {
+            "trait_type": "screen",
+            "value": "bullish"
+        },
+        {
+            "trait_type": "beanie",
+            "value": "xrp"
+        },
+        {
+            "trait_type": "accessories",
+            "value": "mug"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}
