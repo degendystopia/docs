@@ -29,22 +29,22 @@ const Home = ({}: Props) => {
                     />
                 </div>
 
-                <div className={Classes.section}>
-                    <div className={Classes['degen-6']} />
-                    <div className={Classes['degen-5']} />
-                    <div className={Classes['degen-4']} />
-                    <div className={Classes['degen-3']} />
-                    <div className={Classes['degen-2']} />
-                    <div className={Classes['degen-1']} />
-                    <div className={Classes['missedout']} />
-                    <div className={Classes['apartments-1']} />
-                    <div className={Classes['parallax-4']} />
-                    <div className={Classes['parallax-3']} />
-                    <div className={Classes['parallax-2']} />
-                    <div className={Classes['parallax-1']} />
-                    <div className={Classes.floor} />
-                    <div className={Classes.bg} />
-                </div>
+                {/* <div className={Classes.section}> */}
+                <div className={Classes['degen-6']} />
+                <div className={Classes['degen-5']} />
+                <div className={Classes['degen-4']} />
+                <div className={Classes['degen-3']} />
+                <div className={Classes['degen-2']} />
+                <div className={Classes['degen-1']} />
+                <div className={Classes['missedout']} />
+                <div className={Classes['apartments-1']} />
+                <div className={Classes['parallax-4']} />
+                <div className={Classes['parallax-3']} />
+                <div className={Classes['parallax-2']} />
+                <div className={Classes['parallax-1']} />
+                {/* <div className={Classes.floor} /> */}
+                <div className={Classes.bg} />
+                {/* </div> */}
             </div>
 
             <div>
@@ -64,7 +64,7 @@ const Home = ({}: Props) => {
                 </Script>
             </div>
 
-            <MintCountdown date="July 25, 2022 20:00:00" children={<MintForm />} />
+            <MintCountdown date="Tues, 26 Jul 2022 0:00:00 GMT" children={<MintForm />} />
             <HomeIntro />
             <HomeFeatures />
         </>

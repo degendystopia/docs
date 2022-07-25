@@ -8,7 +8,6 @@ import DegensTokenABI from '@/tokens/degens'
 import Modal from '../modal'
 import Contracts from '../../utils/contracts'
 
-import { getDefaultProvider } from 'ethers'
 import { NftProvider, useNft } from 'use-nft'
 
 // Alternatively, you can use the "ethereum" fetcher. Note

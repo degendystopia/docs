@@ -184,6 +184,25 @@
     border-radius: spacing(3);
 }
 
+.hereitis {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 105%;
+    width: 125%;
+    margin: auto;
+    background-image: url('/images/hereitis.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    z-index: 0;
+    border-radius: spacing(3);
+}
+
 .mintpanic {
     display: block;
     position: absolute;
@@ -489,6 +508,16 @@
     // background-size: 100%;
     z-index: 0;
     border-radius: spacing(1);
+}
+
+.center {
+    margin-top: spacing(1);
+    margin: spacing(2);
+    // display: block;
+    // position: absolute;
+    // top: 0%;
+    // -ms-transform: translateY(-50%);
+    // transform: translateY(-50%);
 }
 
 button.shake {

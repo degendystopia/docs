@@ -10,6 +10,7 @@ const BurnPage: NextPage = () => {
                 <title>Burn | down bad doomers</title>
                 <meta property="og:title" content="Burn | downbad doomers" />
                 <meta property="og:url" content="https://doomers.wtf/Burn" />
+                <meta property="og:image" content="https://doomers.wtf/images/wagmi.jpg" />
             </Head>
             <div>
                 {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}

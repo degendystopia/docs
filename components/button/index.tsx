@@ -12,7 +12,7 @@ interface Props {
     onClick?(): any
     variant?: 'light' | 'dark'
     effect?: string
-    type?: 'submit'
+    type?: 'submit' | 'button'
     href?: string
     scroll?: boolean
 }

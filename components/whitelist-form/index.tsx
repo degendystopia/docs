@@ -153,9 +153,11 @@ function WhitelistCount(props) {
         }
     })
     useInterval(() => {
-        socket.emit('whitelisted-count', (count: number) => {
-            setCount(count)
-        })
+        if (socket) {
+            socket.emit('whitelisted-count', (count: number) => {
+                setCount(count)
+            })
+        }
     }, 2000)
     return (
         <Container>

@@ -20,8 +20,11 @@ export interface WhitelistData {
 export class WhitelistStorage {
     configmapName = 'whitelist'
     configmapNamespace = 'doomers'
+    // 30 second refresh interval
+    refreshInterval = 30 * 1000
 
     cachedConfigMap: V1ConfigMap | undefined
+    lastUpdated?: number
 
     async getCurrentWhitelist(): Promise<Map<string, WhitelistData>> {
         const configmap = await this.getConfigMap()
@@ -59,7 +62,11 @@ export class WhitelistStorage {
     }
 
     private async getConfigMap(): Promise<V1ConfigMap | undefined> {
-        if (this.cachedConfigMap) {
+        if (
+            this.cachedConfigMap &&
+            this.lastUpdated &&
+            Date.now() - this.lastUpdated < this.refreshInterval
+        ) {
             return this.cachedConfigMap
         }
         const resp = await k8sApi.readNamespacedConfigMap(
@@ -71,6 +78,7 @@ export class WhitelistStorage {
             return
         }
         this.cachedConfigMap = resp.body
+        this.lastUpdated = Date.now()
         return resp.body
     }
 

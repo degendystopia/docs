@@ -20,6 +20,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+
     background-color: rgba($color: #fff, $alpha: 1);
     mask-image: url('/images/pixels.svg');
     mask-repeat: repeat;
@@ -33,7 +34,7 @@
     right: 0;
     bottom: 0;
     top: spacing(8);
-    height: spacing(15);
+    height: spacing(25);
     background-color: theme('brown');
     border-top: spacing(1) solid theme('background');
     border-bottom: spacing(1) solid theme('primary');
@@ -63,7 +64,7 @@
     background-position: bottom;
     left: 0;
     right: 0;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
 }
@@ -184,7 +185,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 5%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
 }
@@ -198,7 +199,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 15%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     display: none;
@@ -217,7 +218,7 @@
     background-size: 100%;
     background-position: bottom;
     left: 25%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     display: none;
@@ -236,7 +237,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 25%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -256,7 +257,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 15%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -276,7 +277,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 5%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -291,7 +292,7 @@
     background-size: 100%;
     background-position: bottom;
     right: 5%;
-    bottom: spacing(4);
+    bottom: spacing(0);
     margin: auto;
     z-index: 3;
     transform: scaleX(-1);
@@ -307,12 +308,14 @@
     height: 100%;
     width: 100%;
     margin: auto;
+    // height: spacing(5);
+    // margin-top: spacing;
     background-image: url('/images/parallax/1.png');
     background-position: bottom left;
     background-repeat: repeat-x;
     // background-attachment: fixed;
     background-size: 35%;
-    // background-size: 100%;
+    // background-size: 20%;
     z-index: 0;
     border-radius: spacing(1);
 }
@@ -327,12 +330,14 @@
     height: 100%;
     width: 100%;
     margin: auto;
+    // height: spacing(5);
+    // margin-top: spacing;
     background-image: url('/images/parallax/2.png');
     background-position: bottom left;
     background-repeat: repeat-x;
     // background-attachment: fixed;
     background-size: 35%;
-    // background-size: 100%;
+    // background-size: 20%;
     z-index: 0;
     border-radius: spacing(1);
 }
@@ -347,12 +352,14 @@
     height: 100%;
     width: 100%;
     margin: auto;
+    // height: spacing(5);
+    // margin-top: spacing;
     background-image: url('/images/parallax/3.png');
     background-position: bottom left;
     background-repeat: repeat-x;
     // background-attachment: fixed;
     background-size: 35%;
-    // background-size: 100%;
+    // background-size: 20%;
     z-index: 0;
     border-radius: spacing(1);
 }
@@ -367,12 +374,14 @@
     height: 100%;
     width: 100%;
     margin: auto;
+    // height: spacing(5);
+    // margin-top: spacing;
     background-image: url('/images/parallax/4.png');
     background-position: bottom left;
     background-repeat: repeat-x;
     // background-attachment: fixed;
     background-size: 35%;
-    // background-size: 100%;
+    // background-size: 20%;
     z-index: 0;
     border-radius: spacing(1);
 }

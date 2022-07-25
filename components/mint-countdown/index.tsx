@@ -18,6 +18,17 @@ interface Props {
 /**
  * Layout component
  */
+const convertToUtc = (date: Date) => {
+    return Date.UTC(
+        date.getUTCFullYear(),
+        date.getUTCMonth(),
+        date.getUTCDate(),
+        date.getUTCHours(),
+        date.getUTCMinutes(),
+        date.getUTCSeconds(),
+    )
+}
+
 const MintCountdown = (props: Props) => {
     const completed = new Date(props.date).getTime() > Date.now()
     return (
@@ -36,7 +47,7 @@ const MintCountdown = (props: Props) => {
                                             <Countdown date={new Date(props.date)} />
                                         </span>{' '}
                                     </h2>
-                                    <p>{props.date}</p>
+                                    <p>{new Date(props.date).toString()}</p>
                                 </div>
                             </div>
                         ) : (

@@ -1,7 +1,9 @@
 import { WhitelistData, WhitelistStorage } from 'pages/api/whitelistStorage'
 import { Socket } from 'socket.io'
+import { ServerContracts } from './contracts'
 
 const whitelistStorage = new WhitelistStorage()
+const serverContracts = new ServerContracts()
 
 const addWhitelistHandler = (socket: Socket) => {
     const whitelist = async (data: WhitelistData, callback) => {
@@ -36,9 +38,16 @@ const addWhitelistHandler = (socket: Socket) => {
         callback(currentWl.size)
     })
 
-    socket.on('redeem-whitelist', async (callback) => {
+    socket.on('redeem-whitelist', async (address: string, callback) => {
         const currentWl = await whitelistStorage.getCurrentWhitelist()
-        callback(currentWl.size)
+        if (!currentWl.has(address)) {
+            callback('Not found')
+            return
+        }
+
+        const { nonce, wlSignature } = await serverContracts.getSignedNonce(address)
+
+        callback('', nonce, wlSignature)
     })
 }
 

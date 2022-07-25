@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Layout>
             <Head>
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="/images/doomers/5.webp" />
+                <meta property="og:image" content="https://doomers.wtf/images/wagmi.jpg" />
             </Head>
             <Component {...pageProps} />
         </Layout>

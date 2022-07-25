@@ -13,10 +13,6 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "SignerManager",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.SignerManager__factory>;
-    getContractFactory(
       name: "BaseTokenURI",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.BaseTokenURI__factory>;
@@ -185,10 +181,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.DownBadDoomers__factory>;
     getContractFactory(
-      name: "DownBadDoomersWhileist",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.DownBadDoomersWhileist__factory>;
-    getContractFactory(
       name: "SmolDoomers",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SmolDoomers__factory>;
@@ -257,11 +249,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC721A__factory>;
 
-    getContractAt(
-      name: "SignerManager",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.SignerManager>;
     getContractAt(
       name: "BaseTokenURI",
       address: string,
@@ -472,11 +459,6 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.DownBadDoomers>;
-    getContractAt(
-      name: "DownBadDoomersWhileist",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.DownBadDoomersWhileist>;
     getContractAt(
       name: "SmolDoomers",
       address: string,

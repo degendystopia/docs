@@ -2,6 +2,5 @@
 /* tslint:disable */
 /* eslint-disable */
 export { DownBadDoomers__factory } from "./DownBadDoomers__factory";
-export { DownBadDoomersWhileist__factory } from "./DownBadDoomersWhileist__factory";
 export { SmolDoomers__factory } from "./SmolDoomers__factory";
 export { SmolrDoomers__factory } from "./SmolrDoomers__factory";

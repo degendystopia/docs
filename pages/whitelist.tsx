@@ -11,6 +11,7 @@ const MintPage: NextPage = () => {
                 <title>Whitelist | down bad doomers</title>
                 <meta property="og:title" content="Whitelist | downbad doomers" />
                 <meta property="og:url" content="https://doomers.wtf/whitelist" />
+                <meta property="og:image" content="https://doomers.wtf/images/wagmi.jpg" />
             </Head>
             <div>
                 {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}

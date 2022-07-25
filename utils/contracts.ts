@@ -2,9 +2,9 @@ import { Signer } from 'ethers'
 import { DownBadDoomers, DownBadDoomers__factory } from '../typechain-types'
 import type { Provider } from '@ethersproject/providers'
 
-export const HARDHAT_NETWORK = {
+const HARDHAT_NETWORK = {
     PROVIDER_URL: 'http://127.0.0.1:8545/',
-    DOWN_BAD_DOOMERS: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
+    DOWN_BAD_DOOMERS: '0x9E545E3C0baAB3E08CdfD552C960A1050f373042',
     // metamask info
     CHAIN_NAME: 'Hardhat',
     CHAIN_ID: '0x7A69',
@@ -13,8 +13,21 @@ export const HARDHAT_NETWORK = {
     SYMBOL: 'ETH',
 }
 
+const RINKEBY_NETWORK = {
+    PROVIDER_URL: 'https://eth-rinkeby.alchemyapi.io/v2/dc00YrlYJaJXqpiwHwOnm40W9wwB6UQ3',
+    DOWN_BAD_DOOMERS: '0x175e4eb9CeDB26bc402102ee677FC71809274f32',
+    // metamask info
+    CHAIN_NAME: 'Rinkeby',
+    CHAIN_ID: '0x04',
+    NATIVE_CURRENCY: 'Ether',
+    SYMBOL: 'ETH',
+}
+
+// export const NETWORK = HARDHAT_NETWORK
+export const NETWORK = RINKEBY_NETWORK
+
 const addressses = {
-    DownBadDoomers: HARDHAT_NETWORK.DOWN_BAD_DOOMERS,
+    DownBadDoomers: NETWORK.DOWN_BAD_DOOMERS,
 }
 
 export default class Contracts {
@@ -32,11 +45,14 @@ class DownBadDoomersContract {
         this.contract = DownBadDoomers__factory.connect(address, signer)
     }
     async mintPublic(quantity) {
-        return await this.contract.mintPublic(await this.signerAddr(), quantity)
+        return await this.contract.mintPublic(await this.signerAddr(), quantity, {
+            value: await this.cost(quantity),
+        })
     }
-    async mintWhiteist(nonce, signature) {
+    async mintWhitelist(nonce, signature) {
         return await this.contract.mintWhitelist(nonce, signature)
     }
+
     async cost(quantity) {
         return await this.contract.cost(quantity, 0)
     }

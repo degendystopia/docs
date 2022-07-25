@@ -3,12 +3,13 @@ import Container from '@/components/container'
 import Title from '../title'
 import Button from '../button'
 import React, { FormEventHandler, useEffect, useState } from 'react'
-import Contracts from '../../utils/contracts'
+import Contracts, { NETWORK } from '../../utils/contracts'
 
 import { ethers } from 'ethers'
 import { Socket, io } from 'socket.io-client'
 import { WhitelistData } from 'pages/api/whitelistStorage'
 import { useFloating } from '@floating-ui/react-dom'
+import useInterval from 'utils/interval'
 // Skip typechecking on the window object
 declare let window: any
 /**
@@ -16,6 +17,7 @@ declare let window: any
  */
 const MintForm = () => {
     const [contracts, setContracts] = useState<Contracts>(null)
+    const [userAddress, setAddr] = useState<string>('')
     const [quantity, setQuantity] = useState(1) // for public mint
     const [totalMinted, setTotalMinted] = useState(0)
     const [socket, setSocket] = useState<Socket>(undefined)
@@ -40,7 +42,10 @@ const MintForm = () => {
     // connect to the contracts
     const connectContracts = async () => {
         // Create a new ethers.js instance
-        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const provider = new ethers.providers.Web3Provider(window.ethereum, {
+            name: 'localhost',
+            chainId: Number(NETWORK.CHAIN_ID),
+        })
 
         // Request permissions to connect to user account
         await provider.send('eth_requestAccounts', [])
@@ -48,13 +53,27 @@ const MintForm = () => {
         // Define signer
         const signer = provider.getSigner()
 
-        // Get the connected user address
-        const userAddress = await signer.getAddress()
+        const network = await provider.detectNetwork()
+
+        if (network.chainId != Number(NETWORK.CHAIN_ID)) {
+            setInfoText(
+                `change network to ${NETWORK.CHAIN_NAME} ${network.chainId} ${Number(
+                    NETWORK.CHAIN_ID,
+                )}`,
+            )
+
+            await (provider.provider as any).request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: NETWORK.CHAIN_ID }],
+            })
+            return
+        }
 
         // If address is null in state
         if (!contracts) {
             // Store the user address in state
             setContracts(new Contracts(signer))
+            setAddr(await signer.getAddress())
         }
         console.log('connected')
     }
@@ -63,6 +82,21 @@ const MintForm = () => {
         connectContracts()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [contracts])
+
+    const getTotalMinted = async () => {
+        if (!contracts) {
+            return
+        }
+        const totalMinted = await contracts.doomers.contract.totalSupply()
+        setTotalMinted(totalMinted.toNumber())
+    }
+
+    useEffect(() => {
+        getTotalMinted()
+    })
+    useInterval(() => {
+        getTotalMinted()
+    }, 2000)
 
     const mintPublic = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -106,7 +140,7 @@ const MintForm = () => {
                 setInfoText("congats! you made the WL. now let's see if you already claimed it.")
 
                 try {
-                    const tx = await contracts.doomers.mintWhiteist(nonce, signature)
+                    const tx = await contracts.doomers.mintWhitelist(nonce, signature)
                     console.log(tx)
                     const receipt = await tx.wait()
                 } catch (e) {
@@ -124,6 +158,19 @@ const MintForm = () => {
         <Container>
             <Title variant="light-shake" name="ₒₕ ₛₕᵢₜ" align="center" />
 
+            <div className={Classes.section}>
+                <div className={Classes.image}>
+                    <div className={Classes.hereitis} />
+                </div>
+                <div className={Classes.content}>
+                    <div>
+                        <h2>
+                            <span className="text-shake">ᵢₜ&apos;ₛ ₕₑᵣₑ</span>
+                        </h2>
+                        <p>(ₜₕₑ ₘᵢₙₜ).</p>
+                    </div>
+                </div>
+            </div>
             {/* intro */}
             <MintPanic
                 mintPublic={mintPublic}
@@ -131,6 +178,7 @@ const MintForm = () => {
                 totalMinted={totalMinted}
                 quantity={quantity}
                 setQuantity={setQuantity}
+                userAddress={userAddress}
             />
 
             {/* # whitelisted/150, # minted, public mint, whitelisted mint button, result page  */}
@@ -145,46 +193,23 @@ const MintForm = () => {
 
 export default MintForm
 
-function MintPanic({ mintPublic, mintWhitelist, totalMinted, quantity, setQuantity }) {
-    return (
+function MintPanic({ mintPublic, mintWhitelist, totalMinted, quantity, setQuantity, userAddress }) {
+    const mintForm = (
         <div className={Classes.wrapper}>
             <div className={Classes.root}>
-                <div className={Classes.mintpanic} />
-                <div className={Classes.section}>
-                    <div className={Classes.content}>
-                        <div>
-                            <h1>
-                                <span className="text-primary">ₒₕ ₛₕᵢₜ..</span>
-                            </h1>
-                            <h2>
-                                <span className="text-primary">ᵢₜ&apos;ₛ ₕₑᵣₑ</span>
-                            </h2>
-                            <p>(ₜₕₑ ₘᵢₙₜ).</p>
-                        </div>
-                    </div>
-                    <div className={Classes.content}>
-                        <div>
-                            <h2>
-                                <span className="text-primary"> there&apos;s still time</span>.
-                            </h2>
-                            <p>{totalMinted}/1050 minted so far.</p>
-                        </div>
-                    </div>
-                </div>
                 <div className={Classes.section}>
                     <div className={Classes.content}>
                         <form id="mint-form" onSubmit={mintPublic}>
                             <h2>
                                 <span id="info-text" className="text-primary">
-                                    here it comes
+                                    Connected with {userAddress}
                                 </span>
                                 .
                             </h2>
 
-                            <div>
+                            <div className="vertical-center">
                                 <h2>
-                                    Quantity (up to 10):
-                                    <span className="text-primary">(required)</span>:
+                                    Quantity <span className="text-primary">(max 10)</span>:
                                 </h2>
                                 <input
                                     className="text-secondary"
@@ -193,22 +218,83 @@ function MintPanic({ mintPublic, mintWhitelist, totalMinted, quantity, setQuanti
                                     value={quantity}
                                     onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
                                 />
+
+                                <div className={Classes['center']}>
+                                    <div className={Classes.section}>
+                                        <div className={Classes.content}>
+                                            <h2>
+                                                <Button
+                                                    name="public mint: 0.05ETH"
+                                                    type="submit"
+                                                    variant="light"
+                                                    icon={
+                                                        <img
+                                                            src="/images/heart.png"
+                                                            alt="public mint"
+                                                        />
+                                                    }
+                                                />
+                                            </h2>
+                                        </div>
+                                        <div className={Classes.content}>
+                                            <h2>
+                                                <Button
+                                                    name="whitelist mint: FREE"
+                                                    variant="light"
+                                                    icon={
+                                                        <img
+                                                            src="/images/heart.png"
+                                                            alt="whitelist mint"
+                                                        />
+                                                    }
+                                                    type="button"
+                                                    onClick={mintWhitelist}
+                                                />
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <Button
-                                name="public mint: 0.05ETH"
-                                type="submit"
-                                variant="light"
-                                icon={<img src="/images/heart.png" alt="public mint" />}
-                            />
-
-                            <Button
-                                name="whitelist mint: FREE"
-                                variant="light"
-                                icon={<img src="/images/heart.png" alt="whitelist mint" />}
-                                onClick={mintWhitelist}
-                            />
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+    return (
+        <div className={Classes.wrapper}>
+            <div className={Classes.root}>
+                <div className={Classes.section}>
+                    <div className={Classes.content}>
+                        <div className={Classes['text-shake']}>
+                            {totalMinted < 1050 ? (
+                                <div>
+                                    <h2>
+                                        <span className="text-primary">
+                                            {' '}
+                                            there&apos;s still time
+                                        </span>
+                                        .
+                                    </h2>
+                                    <p>{totalMinted}/1050 minted so far.</p>
+                                    {mintForm}
+                                </div>
+                            ) : (
+                                <div>
+                                    <div className={Classes.image}>
+                                        <div className={Classes.suicide} />
+                                    </div>
+                                    <h2>
+                                        <span className="text-primary">
+                                            {' '}
+                                            all 1050 minted out! better luck next time, anon
+                                        </span>
+                                        .
+                                    </h2>
+                                    <p>better try secondary.</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -394,8 +480,6 @@ function OhShitWhatHappenedToTheForm() {
 }
 
 function IHopeTheWhiteListIsOpen(props) {
-    const { x, y, reference, floating, strategy } = useFloating()
-
     // You can use Hooks here!
     return (
         <Container>
@@ -433,7 +517,7 @@ function IHopeTheWhiteListIsOpen(props) {
                     <div className={Classes.trading} />
                 </div>
                 <div className={Classes.content}>
-                    <form id="whitelist-form" onSubmit={props.submitForm} ref={reference}>
+                    <form id="whitelist-form" onSubmit={props.submitForm}>
                         <div className={Classes.form}>
                             <div>
                                 <h2>
@@ -447,32 +531,25 @@ function IHopeTheWhiteListIsOpen(props) {
                                 <h2>Note:</h2>
                                 <input className="text-secondary" type="text" name="note" />
                             </div>
-                        </div>
-                        {props.clicked ? (
-                            <div
-                                ref={floating}
-                                style={{
-                                    position: strategy,
-                                    // left: (x ?? 0) - Math.random() * 240 * 2,
-                                    // top: (y ?? 0) - Math.random() * 200 * 2,
-                                }}
-                            >
+                            {props.clicked ? (
+                                <div>
+                                    <Button
+                                        name="submit"
+                                        effect="rotate"
+                                        variant="light"
+                                        type="submit"
+                                        icon={<img src="/images/heart.png" alt="heart" />}
+                                    />
+                                </div>
+                            ) : (
                                 <Button
                                     name="submit"
-                                    effect="rotate"
                                     variant="light"
                                     type="submit"
                                     icon={<img src="/images/heart.png" alt="heart" />}
                                 />
-                            </div>
-                        ) : (
-                            <Button
-                                name="submit"
-                                variant="light"
-                                type="submit"
-                                icon={<img src="/images/heart.png" alt="heart" />}
-                            />
-                        )}
+                            )}
+                        </div>
                     </form>
                 </div>
             </div>
