@@ -64,7 +64,9 @@ const Home = ({}: Props) => {
                 </Script>
             </div>
 
-            <MintCountdown date="Tues, 26 Jul 2022 0:00:00 GMT" children={<MintForm />} />
+            <MintCountdown>
+                <MintForm />
+            </MintCountdown>
             <HomeIntro />
             <HomeFeatures />
         </>

@@ -28,9 +28,10 @@ const convertToUtc = (date: Date) => {
         date.getUTCSeconds(),
     )
 }
+const startDate = 'Tues, 26 Jul 2022 0:00:00 GMT'
 
-const MintCountdown = (props: Props) => {
-    const completed = new Date(props.date).getTime() > Date.now()
+const MintCountdown = (props) => {
+    const completed = new Date(startDate).getTime() > Date.now()
     return (
         <Container>
             <div className={Classes.wrapper}>
@@ -44,10 +45,10 @@ const MintCountdown = (props: Props) => {
                                     <h2>
                                         minting starts in{' '}
                                         <span className="text-primary">
-                                            <Countdown date={new Date(props.date)} />
+                                            <Countdown date={new Date(startDate)} />
                                         </span>{' '}
                                     </h2>
-                                    <p>{new Date(props.date).toString()}</p>
+                                    <p>{new Date(startDate).toString()}</p>
                                 </div>
                             </div>
                         ) : (

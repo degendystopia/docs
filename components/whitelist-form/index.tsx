@@ -15,7 +15,7 @@ import useInterval from 'utils/interval'
  */
 const WhitelistForm = () => {
     // set up socketio
-    useEffect(() => socketInitializer(), [])
+    useEffect(() => socketInitializer())
 
     const [conn, setConn] = React.useState({
         socket: null as Socket | undefined,
@@ -118,7 +118,7 @@ const WhitelistForm = () => {
             // 👇️ scroll to top on page load
             window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
         }
-    }, [])
+    })
 
     return (
         <Container>

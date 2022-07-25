@@ -15,7 +15,7 @@ const HARDHAT_NETWORK = {
 
 const RINKEBY_NETWORK = {
     PROVIDER_URL: 'https://eth-rinkeby.alchemyapi.io/v2/dc00YrlYJaJXqpiwHwOnm40W9wwB6UQ3',
-    DOWN_BAD_DOOMERS: '0x175e4eb9CeDB26bc402102ee677FC71809274f32',
+    DOWN_BAD_DOOMERS: '0x69a3739A52223c4A8654F66Ed9ba85BF3EFffcf2',
     // metamask info
     CHAIN_NAME: 'Rinkeby',
     CHAIN_ID: '0x04',

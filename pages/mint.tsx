@@ -29,7 +29,9 @@ const MintPage: NextPage = () => {
         `}
                 </Script>
             </div>
-            <MintCountdown date="July 22, 2022 20:00:00" children={<MintForm />} />
+            <MintCountdown date="July 22, 2022 20:00:00">
+                <MintForm />
+            </MintCountdown>
         </>
     )
 }
