@@ -1,0 +1,43 @@
+{
+    "name": "Down Bad Doomers #550",
+    "description": "1,050 Dᴏᴡɴ Bᴀᴅ Dᴏᴏᴍᴇʀs ᴀʀᴇ ɢᴏɪɴɢ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀʟʟ ʙᴀᴄᴋ ɪɴ ᴛʜᴇ ʙᴇᴀʀ ᴍᴀʀᴋᴇᴛ. Lᴀᴜɴᴄʜᴇᴅ ᴏɴ Eᴛʜᴇʀᴇᴜᴍ ʙᴜᴛ ʀᴇsɪᴅɪɴɢ ᴡʜᴇʀᴇᴠᴇʀ ᴛʜᴇʏ ᴘʟᴇᴀsᴇ, ᴛʜᴇsᴇ NFTs sᴇʀᴠᴇ ᴀs ʏᴏᴜʀ ᴛɪᴄᴋᴇᴛ ᴛᴏ ᴍᴜʟᴛɪᴘʟᴇ ɢᴀᴍᴇs, ᴡʜɪᴛᴇʟɪsᴛs, ᴀɴᴅ ᴇxᴄʟᴜsɪᴠᴇ ᴄᴏɴᴛᴇɴᴛ. Nᴏ ᴘᴜʙʟɪᴄ ʀᴏᴀᴅᴍᴀᴘ, ɴᴏ ᴘʀᴏᴍɪsᴇs, ɴᴏ-ɴᴏɴsᴇɴsᴇ. ᵂᴬᴳᴹᴵ",
+    "image": "ipfs://QmY2nPLTzWpytXawRJ89yy82zFYB3rRkHTc26E4KyEdk5x/550.png",
+    "dna": "dad9da4051bd82af2f6ec151daa92ef39e33ae71",
+    "edition": 550,
+    "date": 1658716326586,
+    "attributes": [
+        {
+            "trait_type": "backgrounds",
+            "value": "salmon"
+        },
+        {
+            "trait_type": "wojak",
+            "value": "rage"
+        },
+        {
+            "trait_type": "shirts",
+            "value": "hoodie_red"
+        },
+        {
+            "trait_type": "faces",
+            "value": "smug"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "blunt"
+        },
+        {
+            "trait_type": "hats",
+            "value": "none"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "transparent",
+            "value": "none"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}
