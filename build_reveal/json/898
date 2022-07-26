@@ -1,0 +1,35 @@
+{
+  "name": "Down Bad Doomers #898",
+  "description": "We will all make it",
+  "image": "ipfs://insert/898.png",
+  "dna": "1f7cd58887cc331c2e820a97124f61d4f90ca139",
+  "edition": 898,
+  "date": 1658716334373,
+  "attributes": [
+    {
+      "trait_type": "backgrounds",
+      "value": "lemon"
+    },
+    {
+      "trait_type": "base",
+      "value": "head"
+    },
+    {
+      "trait_type": "face",
+      "value": "depressed"
+    },
+    {
+      "trait_type": "screen",
+      "value": "bearish"
+    },
+    {
+      "trait_type": "beanie",
+      "value": "eth"
+    },
+    {
+      "trait_type": "accessories",
+      "value": "mug"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

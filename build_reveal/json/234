@@ -1,0 +1,16 @@
+{
+  "name": "Down Bad Doomers #234",
+  "description": "We will all make it",
+  "image": "ipfs://insert/234.png",
+  "dna": "40eca989c4edf1805e4ca93c0df4b2fd1f351243",
+  "edition": 234,
+  "date": 1658716319447,
+  "attributes": [
+    {
+      "trait_type": "one_of_one",
+      "value": "soyjak"
+    },
+    
+  ],
+  "compiler": "HashLips Art Engine"
+}
