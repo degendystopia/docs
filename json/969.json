@@ -1,0 +1,43 @@
+{
+    "name": "Down Bad Doomers #969",
+    "description": "We will all make it",
+    "image": "ipfs://QmY2nPLTzWpytXawRJ89yy82zFYB3rRkHTc26E4KyEdk5x/969.png",
+    "dna": "d12496d10b1ef077d0e0280cd51aa230dd58ba0a",
+    "edition": 969,
+    "date": 1658716335943,
+    "attributes": [
+        {
+            "trait_type": "backgrounds",
+            "value": "noir"
+        },
+        {
+            "trait_type": "wojak",
+            "value": "plain"
+        },
+        {
+            "trait_type": "shirts",
+            "value": "hoodie_blue"
+        },
+        {
+            "trait_type": "faces",
+            "value": "cry"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "none"
+        },
+        {
+            "trait_type": "hats",
+            "value": "none"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "ar"
+        },
+        {
+            "trait_type": "transparent",
+            "value": "none"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}

@@ -36,9 +36,9 @@ const Header = ({}: Props) => {
 
                         <a
                             className={Classes.button}
-                            href="https://raritysniper.com/nft-drops-calendar"
+                            href="https://opensea.io/collection/down-bad-doomers-official"
                         >
-                            <img src="/images/raritysniper.png" alt="raritysniper" />
+                            <img src="/images/opensea.png" alt="opensea" />
                         </a>
                     </div>
                 </div>

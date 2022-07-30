@@ -1,5 +1,4 @@
 import MintCountdown from '@/components/mint-countdown'
-import MintForm from '@/components/mint-form'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -29,9 +28,7 @@ const MintPage: NextPage = () => {
         `}
                 </Script>
             </div>
-            <MintCountdown date="July 22, 2022 20:00:00">
-                <MintForm />
-            </MintCountdown>
+            <MintCountdown revealForm={true} />
         </>
     )
 }

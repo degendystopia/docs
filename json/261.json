@@ -1,0 +1,15 @@
+{
+    "name": "Down Bad Doomers #261",
+    "description": "We will all make it",
+    "image": "ipfs://QmY2nPLTzWpytXawRJ89yy82zFYB3rRkHTc26E4KyEdk5x/261.png",
+    "dna": "9778f6a68ad8e59fd6450c80b9b009d1d3487fd4",
+    "edition": 261,
+    "date": 1658716320060,
+    "attributes": [
+        {
+            "trait_type": "one_of_one",
+            "value": "zombie_boomer"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}

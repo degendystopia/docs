@@ -13,6 +13,7 @@ interface Props {
     variant?: 'light' | 'dark'
     effect?: string
     type?: 'submit' | 'button'
+    center?: boolean
     href?: string
     scroll?: boolean
 }
@@ -29,6 +30,8 @@ const Button = (props: Props) => {
                         Classes.root,
                         props.variant && Classes[props.variant],
                         props.effect && Classes[props.effect],
+                        props.effect && Classes[props.effect],
+                        props.center && Classes['center'],
                     )}
                     onClick={props.onClick}
                 >

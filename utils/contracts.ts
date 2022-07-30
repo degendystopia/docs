@@ -23,8 +23,19 @@ const RINKEBY_NETWORK = {
     SYMBOL: 'ETH',
 }
 
+const MAINNET_NETWORK = {
+    PROVIDER_URL: 'https://eth-mainnet.g.alchemy.com/v2/XjN9V7zkd1PbU1esbFDiqB5rVSLlc-Q3',
+    DOWN_BAD_DOOMERS: '0xadF954730949533ceFC0F882E89B8e42325Bb0DC',
+    // metamask info
+    CHAIN_NAME: 'Mainnet',
+    CHAIN_ID: '0x1',
+    NATIVE_CURRENCY: 'Ether',
+    SYMBOL: 'ETH',
+}
+
 // export const NETWORK = HARDHAT_NETWORK
-export const NETWORK = RINKEBY_NETWORK
+// export const NETWORK = RINKEBY_NETWORK
+export const NETWORK = MAINNET_NETWORK
 
 const addressses = {
     DownBadDoomers: NETWORK.DOWN_BAD_DOOMERS,

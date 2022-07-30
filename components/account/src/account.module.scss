@@ -37,9 +37,11 @@
 }
 
 .center {
+    align-content: center;
     font-weight: bold;
     text-align: center;
     padding: spacing(1);
+    justify-content: center;
 }
 
 .modal {

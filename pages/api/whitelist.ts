@@ -38,7 +38,7 @@ const addWhitelistHandler = (socket: Socket) => {
         callback(currentWl.size)
     })
 
-    socket.on('redeem-whitelist', async (address: string, callback) => {
+    socket.on('redeem-whitelist', async (address: string, callback: Function) => {
         const currentWl = await whitelistStorage.getCurrentWhitelist()
         if (!currentWl.has(address)) {
             callback('Not found')

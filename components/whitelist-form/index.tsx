@@ -163,20 +163,37 @@ function WhitelistCount(props) {
         <Container>
             {/* <div className={Classes.section}></div>
              */}
-            <div className={Classes.section}>
-                <div className={Classes.content}>
-                    <div>
-                        <h2>
-                            only <span className="text-primary">{count}/200</span> whitelist spots
-                            claimed.
-                        </h2>
-                        <p>ₗₑₜ&apos;ₛ 𝒻ᵤ𝒸ₖᵢₙ𝓰 𝓰ₒ</p>
+            {count >= 200 ? (
+                <div className={Classes.section}>
+                    <div className={Classes.content}>
+                        <div>
+                            <h2>
+                                all <span className="text-primary">{count}/200</span> whitelist
+                                spots already claimed!! 🤣
+                            </h2>
+                            <p>ɪ ᴍɪssᴇᴅ ɪᴛ.</p>
+                        </div>
+                    </div>
+                    <div className={Classes.image}>
+                        <div className={Classes.suicide} />
                     </div>
                 </div>
-                <div className={Classes.image}>
-                    <div className={Classes.soycomputer} />
+            ) : (
+                <div className={Classes.section}>
+                    <div className={Classes.content}>
+                        <div>
+                            <h2>
+                                only <span className="text-primary">{count}/200</span> whitelist
+                                spots claimed.
+                            </h2>
+                            <p>ₗₑₜ&apos;ₛ 𝒻ᵤ𝒸ₖᵢₙ𝓰 𝓰ₒ</p>
+                        </div>
+                    </div>
+                    <div className={Classes.image}>
+                        <div className={Classes.soycomputer} />
+                    </div>
                 </div>
-            </div>
+            )}
         </Container>
     )
 }
@@ -276,7 +293,7 @@ function IHopeTheWhiteListIsOpen(props) {
 
                     <WhitelistCount conn={props.conn} />
 
-                    <div className={Classes.section}>
+                    {/* <div className={Classes.section}>
                         <div className={Classes.image}>
                             <div className={Classes.trading} />
                         </div>
@@ -329,7 +346,7 @@ function IHopeTheWhiteListIsOpen(props) {
                                 )}
                             </form>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Container>

@@ -3,6 +3,10 @@ import Container from '@/components/container'
 import React, { FormEventHandler, ReactNode, useEffect } from 'react'
 
 import Countdown from 'react-countdown'
+import MintForm from '../mint-form'
+import Button from '../button'
+import Link from 'next/link'
+import WalletConnector from '../wallet-connector'
 
 /**
  * MintCountdown component
@@ -14,24 +18,35 @@ interface Props {
     date: string
     children: ReactNode
 }
-
-/**
- * Layout component
- */
-const convertToUtc = (date: Date) => {
-    return Date.UTC(
-        date.getUTCFullYear(),
-        date.getUTCMonth(),
-        date.getUTCDate(),
-        date.getUTCHours(),
-        date.getUTCMinutes(),
-        date.getUTCSeconds(),
-    )
-}
 const startDate = 'Tues, 26 Jul 2022 0:00:00 GMT'
 
-const MintCountdown = (props) => {
+const MintCountdown = ({ revealForm }) => {
     const completed = new Date(startDate).getTime() > Date.now()
+    const reveal = revealForm ? (
+        <MintForm />
+    ) : (
+        <Link href="/mint">
+            <div className={Classes['center']}>
+                <div className={Classes.wrapper}>
+                    <div className={Classes.section}>
+                        <div className={Classes.image}>
+                            <div className={Classes.hereitis} />
+                            <h2>
+                                <a>
+                                    <Button
+                                        name="MINT"
+                                        variant="light"
+                                        icon={<img src="/images/heart.png" alt="heart" />}
+                                    />
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <p> mint is live!</p>
+            </div>
+        </Link>
+    )
     return (
         <Container>
             <div className={Classes.wrapper}>
@@ -52,7 +67,7 @@ const MintCountdown = (props) => {
                                 </div>
                             </div>
                         ) : (
-                            props.children
+                            reveal
                         )}
                     </div>
                 </div>

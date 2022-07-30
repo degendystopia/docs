@@ -5,6 +5,7 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Select from 'react-dropdown-select'
+import WalletConnector from '@/components/wallet-connector'
 
 /**
  * Interfaces
@@ -72,7 +73,19 @@ const Menu = (props) => {
             </div> */}
 
             <div className={Classes.wallet}>
-                {auth ? (
+                <WalletConnector>
+                    <Link href="/account">
+                        <a>
+                            <Button
+                                name="My Account"
+                                variant="light"
+                                icon={<img src="/images/heart.png" alt="heart" />}
+                            />
+                        </a>
+                    </Link>
+                </WalletConnector>
+
+                {/* {auth ? (
                     <Link href="/account">
                         <a>
                             <Button
@@ -83,13 +96,14 @@ const Menu = (props) => {
                         </a>
                     </Link>
                 ) : (
+
                     <Button
                         name="Connect Wallet"
                         variant="light"
                         icon={<img src="/images/heart.png" alt="heart" />}
                         onClick={connect}
                     />
-                )}
+                )} */}
             </div>
         </div>
     )

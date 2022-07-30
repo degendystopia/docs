@@ -64,9 +64,7 @@ const Home = ({}: Props) => {
                 </Script>
             </div>
 
-            <MintCountdown>
-                <MintForm />
-            </MintCountdown>
+            <MintCountdown revealForm={false} />
             <HomeIntro />
             <HomeFeatures />
         </>

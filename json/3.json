@@ -1,0 +1,15 @@
+{
+    "name": "Down Bad Doomers #3",
+    "description": "We will all make it",
+    "image": "ipfs://QmY2nPLTzWpytXawRJ89yy82zFYB3rRkHTc26E4KyEdk5x/3.png",
+    "dna": "a4db0beacd0b5e8bff795aa4f953ce48373cc8ac",
+    "edition": 3,
+    "date": 1658716314210,
+    "attributes": [
+        {
+            "trait_type": "one_of_one",
+            "value": "ai_doomer"
+        }
+    ],
+    "compiler": "HashLips Art Engine"
+}

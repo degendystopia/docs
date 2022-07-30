@@ -138,7 +138,8 @@ const Account = () => {
         const contracts = new Contracts(signer)
 
         // get owend tokens
-        const userTokens = await contracts.doomers.contract.getTokensOfOwner(userAddress)
+        // const userTokens = await contracts.doomers.contract.getTokensOfOwner(userAddress)
+        const userTokens = []
 
         console.log(userTokens)
 

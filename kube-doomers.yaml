@@ -51,7 +51,7 @@ spec:
         spec:
             containers:
                 - name: game
-                  image: registry.digitalocean.com/dd-game-server/doomer-server:0.1.5
+                  image: registry.digitalocean.com/dd-game-server/doomer-server:0.2.2
                   ports:
                       - containerPort: 3000
                   imagePullPolicy: Always
