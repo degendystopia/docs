@@ -1,7 +1,4 @@
 import Account from '@/components/account'
-import Button from '@/components/button'
-import ComingSoon from '@/components/coming-soon'
-import WalletConnector from '@/components/wallet-connector'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useWeb3React } from '@web3-react/core'

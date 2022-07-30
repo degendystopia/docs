@@ -1,25 +1,12 @@
 import React, { useEffect } from 'react'
-import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
-import {
-    NoEthereumProviderError,
-    UserRejectedRequestError as UserRejectedRequestErrorInjected,
-} from '@web3-react/injected-connector'
-import { UserRejectedRequestError as UserRejectedRequestErrorWalletConnect } from '@web3-react/walletconnect-connector'
+import { useWeb3React } from '@web3-react/core'
 import { Web3Provider } from '@ethersproject/providers'
 import { formatEther } from '@ethersproject/units'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { useEagerConnect, useInactiveListener } from '../../core/hooks'
 import { injected, walletconnect } from '../../core/connectors'
-import { Spinner } from '../Spinner'
-import Button from '../button'
 import RevealButton from '../reveal-button'
-
-function getLibrary(provider: any): Web3Provider {
-    const library = new Web3Provider(provider)
-    library.pollingInterval = 12000
-    return library
-}
 
 type Props = {
     children?
@@ -72,15 +59,17 @@ export default function WalletConnector({ children }: Props) {
             name="Connect Wallet"
             variant="light"
             icon={<img src="/images/heart.png" alt="heart" />}
-            // onClick={() => {
-            //     return
-            //     setActivatingConnector(currentConnector)
-            //     activate(currentConnector, (error) => {
-            //         if (error) {
-            //             setActivatingConnector(undefined)
-            //         }
-            //     })
-            // }}
+            onClick={() => {
+                return
+                // THIS TRIPS ME  OUT
+                // why does this connect? TODO: figure out why
+                setActivatingConnector(currentConnector)
+                activate(currentConnector, (error) => {
+                    if (error) {
+                        setActivatingConnector(undefined)
+                    }
+                })
+            }}
             reveal={state.activating}
         />
     )

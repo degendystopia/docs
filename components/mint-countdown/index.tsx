@@ -6,7 +6,6 @@ import Countdown from 'react-countdown'
 import MintForm from '../mint-form'
 import Button from '../button'
 import Link from 'next/link'
-import WalletConnector from '../wallet-connector'
 
 /**
  * MintCountdown component

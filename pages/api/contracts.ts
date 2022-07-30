@@ -15,7 +15,7 @@ export class ServerContracts {
     contracts = contracts
     async getSignedNonce(whitelistedAddr: string) {
         // const nonce = await provider.getTransactionCount(whitelistedAddr, 'latest')
-        const nonce = 1
+        const nonce = 2
         const wlHash = await contracts.doomers.contract.getHashToSign(whitelistedAddr, nonce)
         const wlSignature = await wallet.signMessage(ethers.utils.arrayify(wlHash))
         return { nonce, wlSignature }

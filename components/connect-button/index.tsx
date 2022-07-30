@@ -20,10 +20,9 @@ type Props = {
     name
     variant
     icon
-    useInjected
 }
 
-export default function ConnectButton({ children, name, variant, icon, useInjected }: Props) {
+export default function ConnectButton({ children, name, variant, icon }: Props) {
     const context = useWeb3React<Web3Provider>()
     const { connector, library, chainId, account, activate, deactivate, active, error } = context
 
@@ -41,10 +40,7 @@ export default function ConnectButton({ children, name, variant, icon, useInject
     // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
     useInactiveListener(!triedEager || !!activatingConnector)
 
-    const currentConnector = useInjected ? injected : walletconnect
-    const activating = currentConnector === activatingConnector
-    const connected = currentConnector === connector
-    const disabled = !triedEager || !!activatingConnector || connected || !!error
+    const [reveal, setReveal] = React.useState(false)
 
     return (
         <div>
@@ -53,14 +49,34 @@ export default function ConnectButton({ children, name, variant, icon, useInject
                 variant={variant || 'light'}
                 icon={icon}
                 onClick={() => {
+                    const currentConnector = (window as any).ethereum ? injected : walletconnect
+                    const activating = currentConnector === activatingConnector
+                    const connected = currentConnector === connector
+                    const disabled = !triedEager || !!activatingConnector || connected || !!error
+
+                    if (connected) {
+                        setReveal(true)
+                    }
+
                     setActivatingConnector(currentConnector)
                     activate(currentConnector, (error) => {
                         if (error) {
                             setActivatingConnector(undefined)
+                            return (
+                                <div>
+                                    <p>
+                                        There was an error connecting to your wallet. Please try
+                                        again.
+                                    </p>
+                                    <p>{error?.message}</p>
+                                </div>
+                            )
+                        } else {
+                            console.log('connected')
                         }
                     })
                 }}
-                reveal={connected}
+                reveal={reveal}
             >
                 {children}
             </RevealButton>

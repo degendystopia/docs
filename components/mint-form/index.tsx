@@ -27,7 +27,6 @@ export const walletconnect = new WalletConnectConnector({
 })
 
 import { providers } from 'ethers'
-import Web3Context from '../wallet-connector'
 import ConnectButton from '../connect-button'
 
 // Skip typechecking on the window object
@@ -280,25 +279,10 @@ const MintForm = () => {
         )
     }
 
-    const [isInjected, setIsInjected] = useState(false)
-    useEffect(() => {
-        if (window.ethereum) {
-            console.log('injected')
-            setIsInjected(true)
-        } else {
-            console.log('not gonna injected injected')
-        }
-    })
-
     const connectButton = (
         <div className={Classes.root}>
             <div className={Classes.center}>
-                <ConnectButton
-                    name="Connect Wallet"
-                    variant="light"
-                    icon="heart"
-                    useInjected={isInjected}
-                />
+                <ConnectButton name="Connect Wallet" variant="light" icon="heart" />
 
                 {/* <Button
                     connectButton={(connect) => {
